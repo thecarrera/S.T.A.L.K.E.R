@@ -1,5 +1,6 @@
 #ifndef _D3D_EXT_internal
 #define _D3D_EXT_internal
+#include "Layers/xrRenderDX9/D3DXCompat.hpp"
 
 #ifndef NO_XR_LIGHT
 struct Flight

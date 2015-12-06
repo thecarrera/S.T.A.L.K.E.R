@@ -90,7 +90,7 @@
     <Link>
       <AdditionalDependencies>LuaJIT.lib;luabind.lib;nvapi.lib;oalib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib\x86;$(SolutionDir)Externals\OpenAutomate\libraries;$(SolutionDir)Externals\nvapi\x86;$(SolutionDir)Externals\luajit\bin\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Externals\OpenAutomate\libraries;$(SolutionDir)Externals\nvapi\x86;$(SolutionDir)Externals\luajit\bin\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <TargetMachine>MachineX86</TargetMachine>
@@ -123,7 +123,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>LuaJIT.lib;luabind.lib;nvapi.lib;oalib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib\x86;$(SolutionDir)Externals\OpenAutomate\libraries;$(SolutionDir)Externals\nvapi\x86;$(SolutionDir)Externals\luajit\bin\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Externals\OpenAutomate\libraries;$(SolutionDir)Externals\nvapi\x86;$(SolutionDir)Externals\luajit\bin\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -157,7 +157,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>LuaJIT.lib;luabind.lib;nvapi.lib;oalib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib\x86;$(SolutionDir)Externals\OpenAutomate\libraries;$(SolutionDir)Externals\nvapi\x86;$(SolutionDir)Externals\luajit\bin\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Externals\OpenAutomate\libraries;$(SolutionDir)Externals\nvapi\x86;$(SolutionDir)Externals\luajit\bin\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
       <LargeAddressAware>true</LargeAddressAware>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>

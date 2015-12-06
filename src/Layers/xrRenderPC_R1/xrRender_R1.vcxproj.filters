@@ -582,6 +582,9 @@
     <ClInclude Include="..\xrRender\RenderAllocator.hpp">
       <Filter>Core</Filter>
     </ClInclude>
+    <ClInclude Include="..\xrRenderDX9\D3DXCompat.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -969,6 +972,9 @@
       <Filter>Models\Visuals</Filter>
     </ClCompile>
     <ClCompile Include="..\xrRender\RenderAllocator.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\xrRenderDX9\D3DXCompat.cpp">
       <Filter>Core</Filter>
     </ClCompile>
   </ItemGroup>

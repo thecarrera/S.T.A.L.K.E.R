@@ -90,7 +90,7 @@
     <Link>
       <AdditionalDependencies>LuaJIT.lib;luabind.lib;nvapi.lib;oalib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib\x86;$(SolutionDir)Externals\OpenAutomate\libraries;$(SolutionDir)Externals\nvapi\x86;$(SolutionDir)Externals\luajit\bin\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Externals\OpenAutomate\libraries;$(SolutionDir)Externals\nvapi\x86;$(SolutionDir)Externals\luajit\bin\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <TargetMachine>MachineX86</TargetMachine>
@@ -123,7 +123,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>LuaJIT.lib;luabind.lib;nvapi.lib;oalib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib\x86;$(SolutionDir)Externals\OpenAutomate\libraries;$(SolutionDir)Externals\nvapi\x86;$(SolutionDir)Externals\luajit\bin\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Externals\OpenAutomate\libraries;$(SolutionDir)Externals\nvapi\x86;$(SolutionDir)Externals\luajit\bin\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -156,7 +156,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>LuaJIT.lib;luabind.lib;nvapi.lib;oalib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib\x86;$(SolutionDir)Externals\OpenAutomate\libraries;$(SolutionDir)Externals\nvapi\x86;$(SolutionDir)Externals\luajit\bin\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Externals\OpenAutomate\libraries;$(SolutionDir)Externals\nvapi\x86;$(SolutionDir)Externals\luajit\bin\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
       <LargeAddressAware>true</LargeAddressAware>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -191,6 +191,7 @@
     <ClInclude Include="..\..\Include\xrRender\UISequenceVideoItem.h" />
     <ClInclude Include="..\..\Include\xrRender\UIShader.h" />
     <ClInclude Include="..\..\Include\xrRender\WallMarkArray.h" />
+    <ClInclude Include="..\xrRenderDX9\D3DXCompat.hpp" />
     <ClInclude Include="..\xrRenderDX9\dx9R_Backend_Runtime.h" />
     <ClInclude Include="..\xrRenderDX9\dx9r_constants_cache.h" />
     <ClInclude Include="..\xrRender\Animation.h" />
@@ -311,6 +312,7 @@
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\xrRenderDX9\D3DXCompat.cpp" />
     <ClCompile Include="..\xrRenderDX9\dx9r_constants_cache.cpp" />
     <ClCompile Include="..\xrRender\Animation.cpp" />
     <ClCompile Include="..\xrRender\blenders\Blender.cpp" />
