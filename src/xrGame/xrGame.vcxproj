@@ -217,19 +217,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\xrGameSpy\gamespy\md5.h" />
-    <ClInclude Include="..\xrServerEntities\ai_sounds.h" />
-    <ClInclude Include="..\xrServerEntities\alife_human_brain.h" />
-    <ClInclude Include="..\xrServerEntities\alife_human_brain_inline.h" />
-    <ClInclude Include="..\xrServerEntities\alife_monster_brain.h" />
-    <ClInclude Include="..\xrServerEntities\alife_monster_brain_inline.h" />
-    <ClInclude Include="..\xrServerEntities\alife_movement_manager_holder.h" />
-    <ClInclude Include="..\xrServerEntities\alife_space.h" />
     <ClInclude Include="..\xrServerEntities\character_info.h" />
     <ClInclude Include="..\xrServerEntities\character_info_defs.h" />
     <ClInclude Include="..\xrServerEntities\clsid_game.h" />
     <ClInclude Include="..\xrServerEntities\gametype_chooser.h" />
     <ClInclude Include="..\xrServerEntities\game_base_space.h" />
-    <ClInclude Include="game_graph_space.h" />
     <ClInclude Include="..\xrServerEntities\InfoPortionDefs.h" />
     <ClInclude Include="..\xrServerEntities\inventory_space.h" />
     <ClInclude Include="..\xrServerEntities\ItemListTypes.h" />
@@ -248,7 +240,6 @@
     <ClInclude Include="..\xrServerEntities\pch_script.h" />
     <ClInclude Include="..\xrServerEntities\PHNetState.h" />
     <ClInclude Include="..\xrServerEntities\PropertiesListTypes.h" />
-    <ClInclude Include="..\xrServerEntities\restriction_space.h" />
     <ClInclude Include="..\xrServerEntities\script_ini_file.h" />
     <ClInclude Include="..\xrServerEntities\script_ini_file_inline.h" />
     <ClInclude Include="..\xrServerEntities\script_rtoken_list.h" />
@@ -278,26 +269,9 @@
     <ClInclude Include="..\xrServerEntities\xrServer_Object_Base.h" />
     <ClInclude Include="..\xrServerEntities\xrServer_script_macroses.h" />
     <ClInclude Include="..\xrServerEntities\xrServer_Space.h" />
-    <ClInclude Include="abstract_location_selector.h" />
-    <ClInclude Include="abstract_location_selector_inline.h" />
-    <ClInclude Include="abstract_path_manager.h" />
-    <ClInclude Include="abstract_path_manager_inline.h" />
     <ClInclude Include="account_manager.h" />
     <ClInclude Include="account_manager_console.h" />
     <ClInclude Include="accumulative_states.h" />
-    <ClInclude Include="action_base.h" />
-    <ClInclude Include="action_base_inline.h" />
-    <ClInclude Include="action_management_config.h" />
-    <ClInclude Include="action_planner.h" />
-    <ClInclude Include="action_planner_action.h" />
-    <ClInclude Include="action_planner_action_inline.h" />
-    <ClInclude Include="action_planner_action_script.h" />
-    <ClInclude Include="action_planner_action_script_inline.h" />
-    <ClInclude Include="action_planner_inline.h" />
-    <ClInclude Include="action_planner_script.h" />
-    <ClInclude Include="action_planner_script_inline.h" />
-    <ClInclude Include="action_script_base.h" />
-    <ClInclude Include="action_script_base_inline.h" />
     <ClInclude Include="ActivatingCharCollisionDelay.h" />
     <ClInclude Include="Actor.h" />
     <ClInclude Include="ActorAnimation.h" />
@@ -316,439 +290,11 @@
     <ClInclude Include="actor_statistic_defs.h" />
     <ClInclude Include="actor_statistic_mgr.h" />
     <ClInclude Include="AdvancedDetector.h" />
-    <ClInclude Include="agent_corpse_manager.h" />
-    <ClInclude Include="agent_corpse_manager_inline.h" />
-    <ClInclude Include="agent_enemy_manager.h" />
-    <ClInclude Include="agent_enemy_manager_inline.h" />
-    <ClInclude Include="agent_explosive_manager.h" />
-    <ClInclude Include="agent_explosive_manager_inline.h" />
-    <ClInclude Include="agent_location_manager.h" />
-    <ClInclude Include="agent_location_manager_inline.h" />
-    <ClInclude Include="agent_manager.h" />
-    <ClInclude Include="agent_manager_actions.h" />
-    <ClInclude Include="agent_manager_inline.h" />
-    <ClInclude Include="agent_manager_planner.h" />
-    <ClInclude Include="agent_manager_properties.h" />
-    <ClInclude Include="agent_manager_properties_inline.h" />
-    <ClInclude Include="agent_manager_space.h" />
-    <ClInclude Include="agent_member_manager.h" />
-    <ClInclude Include="agent_member_manager_inline.h" />
-    <ClInclude Include="agent_memory_manager.h" />
-    <ClInclude Include="agent_memory_manager_inline.h" />
-    <ClInclude Include="aimers_base.h" />
-    <ClInclude Include="aimers_base_inline.h" />
-    <ClInclude Include="aimers_bone.h" />
-    <ClInclude Include="aimers_bone_inline.h" />
-    <ClInclude Include="aimers_weapon.h" />
-    <ClInclude Include="aimers_weapon_inline.h" />
-    <ClInclude Include="AI\ai_monsters_anims.h" />
-    <ClInclude Include="AI\ai_monsters_misc.h" />
-    <ClInclude Include="AI\Crow\ai_crow.h" />
-    <ClInclude Include="ai\Monsters\ai_monster_bones.h" />
-    <ClInclude Include="ai\Monsters\ai_monster_defs.h" />
     <ClInclude Include="ai\Monsters\ai_monster_effector.h" />
-    <ClInclude Include="ai\Monsters\ai_monster_motion_stats.h" />
-    <ClInclude Include="ai\Monsters\ai_monster_shared_data.h" />
-    <ClInclude Include="ai\Monsters\ai_monster_squad.h" />
-    <ClInclude Include="ai\Monsters\ai_monster_squad_manager.h" />
-    <ClInclude Include="ai\Monsters\ai_monster_squad_manager_inline.h" />
-    <ClInclude Include="ai\Monsters\ai_monster_utils.h" />
-    <ClInclude Include="ai\Monsters\anim_triple.h" />
-    <ClInclude Include="ai\Monsters\anomaly_detector.h" />
-    <ClInclude Include="ai\monsters\anti_aim_ability.h" />
-    <ClInclude Include="ai\Monsters\BaseMonster\base_monster.h" />
-    <ClInclude Include="ai\Monsters\BaseMonster\base_monster_inline.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_alien.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_attack_state.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_attack_state_hide.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_attack_state_hide_inline.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_attack_state_inline.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_predator.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_predator_inline.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_predator_lite.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_predator_lite_inline.h" />
-    <ClInclude Include="ai\monsters\bloodsucker\bloodsucker_state_capture_jump.h" />
-    <ClInclude Include="ai\monsters\bloodsucker\bloodsucker_state_capture_jump_inline.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_state_manager.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_vampire.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_vampire_approach.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_vampire_approach_inline.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_vampire_effector.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_vampire_execute.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_vampire_execute_inline.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_vampire_hide.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_vampire_hide_inline.h" />
-    <ClInclude Include="ai\Monsters\Bloodsucker\bloodsucker_vampire_inline.h" />
-    <ClInclude Include="ai\Monsters\Boar\boar.h" />
-    <ClInclude Include="ai\Monsters\Boar\boar_state_manager.h" />
-    <ClInclude Include="ai\Monsters\Burer\burer.h" />
-    <ClInclude Include="ai\Monsters\Burer\burer_fast_gravi.h" />
-    <ClInclude Include="ai\Monsters\Burer\burer_state_attack.h" />
-    <ClInclude Include="ai\monsters\burer\burer_state_attack_antiaim.h" />
-    <ClInclude Include="ai\monsters\burer\burer_state_attack_antiaim_inline.h" />
-    <ClInclude Include="ai\Monsters\Burer\burer_state_attack_gravi.h" />
-    <ClInclude Include="ai\Monsters\Burer\burer_state_attack_gravi_inline.h" />
-    <ClInclude Include="ai\Monsters\Burer\burer_state_attack_inline.h" />
-    <ClInclude Include="ai\Monsters\Burer\burer_state_attack_melee.h" />
-    <ClInclude Include="ai\Monsters\Burer\burer_state_attack_melee_inline.h" />
-    <ClInclude Include="ai\Monsters\Burer\burer_state_attack_run_around.h" />
-    <ClInclude Include="ai\Monsters\Burer\burer_state_attack_run_around_inline.h" />
-    <ClInclude Include="ai\monsters\burer\burer_state_attack_shield.h" />
-    <ClInclude Include="ai\monsters\burer\burer_state_attack_shield_inline.h" />
-    <ClInclude Include="ai\Monsters\Burer\burer_state_attack_tele.h" />
-    <ClInclude Include="ai\Monsters\Burer\burer_state_attack_tele_inline.h" />
-    <ClInclude Include="ai\Monsters\Burer\burer_state_manager.h" />
-    <ClInclude Include="ai\Monsters\Cat\cat.h" />
-    <ClInclude Include="ai\Monsters\Cat\cat_state_manager.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera.h" />
-    <CustomBuild Include="ai\monsters\chimera\chimera_attack_state.h" />
-    <CustomBuild Include="ai\monsters\chimera\chimera_attack_state_inline.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_hunting.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_hunting_come_out.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_hunting_come_out_inline.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_hunting_inline.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_hunting_move_to_cover.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_hunting_move_to_cover_inline.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_manager.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_threaten.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_threaten_inline.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_threaten_roar.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_threaten_roar_inline.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_threaten_steal.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_threaten_steal_inline.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_threaten_walk.h" />
-    <ClInclude Include="ai\Monsters\Chimera\chimera_state_threaten_walk_inline.h" />
-    <ClInclude Include="ai\Monsters\controlled_actor.h" />
-    <ClInclude Include="ai\Monsters\controlled_entity.h" />
-    <ClInclude Include="ai\Monsters\controlled_entity_inline.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_animation.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_direction.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_psy_hit.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_psy_hit_effector.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack_camp.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack_camp_inline.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack_fast_move.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack_fast_move_inline.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack_fire.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack_fire_inline.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack_hide.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack_hide_inline.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack_hide_lite.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack_hide_lite_inline.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack_inline.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack_moveout.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_attack_moveout_inline.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_control_hit.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_control_hit_inline.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_manager.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_state_panic.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_tube.h" />
-    <ClInclude Include="ai\Monsters\Controller\controller_tube_inline.h" />
-    <ClInclude Include="ai\Monsters\control_animation.h" />
-    <ClInclude Include="ai\Monsters\control_animation_base.h" />
-    <ClInclude Include="ai\Monsters\control_combase.h" />
-    <ClInclude Include="ai\Monsters\control_com_defs.h" />
-    <ClInclude Include="ai\Monsters\control_critical_wound.h" />
-    <ClInclude Include="ai\Monsters\control_direction.h" />
-    <ClInclude Include="ai\Monsters\control_direction_base.h" />
-    <ClInclude Include="ai\Monsters\control_jump.h" />
-    <ClInclude Include="ai\Monsters\control_manager.h" />
-    <ClInclude Include="ai\Monsters\control_manager_custom.h" />
-    <ClInclude Include="ai\Monsters\control_melee_jump.h" />
-    <ClInclude Include="ai\Monsters\control_movement.h" />
-    <ClInclude Include="ai\Monsters\control_movement_base.h" />
-    <ClInclude Include="ai\Monsters\control_path_builder.h" />
-    <ClInclude Include="ai\Monsters\control_path_builder_base.h" />
-    <ClInclude Include="ai\Monsters\control_path_builder_base_inline.h" />
-    <ClInclude Include="ai\Monsters\control_rotation_jump.h" />
-    <ClInclude Include="ai\Monsters\control_run_attack.h" />
-    <ClInclude Include="ai\Monsters\control_sequencer.h" />
-    <ClInclude Include="ai\Monsters\control_threaten.h" />
-    <ClInclude Include="ai\Monsters\corpse_cover.h" />
-    <ClInclude Include="ai\Monsters\custom_events.h" />
-    <ClInclude Include="ai\Monsters\Dog\dog.h" />
-    <ClInclude Include="ai\Monsters\Dog\dog_state_manager.h" />
-    <ClInclude Include="ai\Monsters\energy_holder.h" />
-    <ClInclude Include="ai\Monsters\Flesh\flesh.h" />
-    <ClInclude Include="ai\Monsters\Flesh\flesh_state_manager.h" />
-    <ClInclude Include="ai\Monsters\Fracture\fracture.h" />
-    <ClInclude Include="ai\Monsters\Fracture\fracture_state_manager.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_attack.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_attack_inline.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_attack_run.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_attack_run_inline.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_custom.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_custom_inline.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_eat.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_eat_drag.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_eat_drag_inline.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_eat_eat.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_eat_eat_inline.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_eat_inline.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_hear_danger_sound.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_hear_danger_sound_inline.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_home_point_attack.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_home_point_attack_inline.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_panic.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_panic_inline.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_panic_run.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_panic_run_inline.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_rest.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_rest_idle.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_rest_idle_inline.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_rest_inline.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_squad_move_to_radius.h" />
-    <ClInclude Include="ai\monsters\group_states\group_state_squad_move_to_radius_inline.h" />
-    <ClInclude Include="ai\monsters\group_states\state_adapter.h" />
-    <ClInclude Include="ai\Monsters\invisibility.h" />
-    <ClInclude Include="ai\Monsters\melee_checker.h" />
-    <ClInclude Include="ai\Monsters\melee_checker_inline.h" />
-    <ClInclude Include="ai\monsters\monster_aura.h" />
-    <ClInclude Include="ai\Monsters\monster_corpse_manager.h" />
-    <ClInclude Include="ai\Monsters\monster_corpse_memory.h" />
-    <ClInclude Include="ai\Monsters\monster_cover_manager.h" />
-    <ClInclude Include="ai\Monsters\monster_enemy_manager.h" />
-    <ClInclude Include="ai\Monsters\monster_enemy_memory.h" />
-    <ClInclude Include="ai\Monsters\monster_event_manager.h" />
-    <ClInclude Include="ai\Monsters\monster_event_manager_defs.h" />
-    <ClInclude Include="ai\Monsters\monster_hit_memory.h" />
-    <ClInclude Include="ai\Monsters\monster_home.h" />
-    <ClInclude Include="ai\Monsters\monster_morale.h" />
-    <ClInclude Include="ai\Monsters\monster_morale_inline.h" />
-    <ClInclude Include="ai\Monsters\monster_sound_defs.h" />
-    <ClInclude Include="ai\Monsters\monster_sound_memory.h" />
-    <ClInclude Include="ai\Monsters\monster_state_manager.h" />
-    <ClInclude Include="ai\Monsters\monster_state_manager_inline.h" />
-    <ClInclude Include="ai\Monsters\monster_velocity_space.h" />
-    <ClInclude Include="ai\Monsters\Poltergeist\poltergeist.h" />
-    <ClInclude Include="ai\Monsters\Poltergeist\poltergeist_movement.h" />
-    <ClInclude Include="ai\Monsters\Poltergeist\poltergeist_state_attack_hidden.h" />
-    <ClInclude Include="ai\Monsters\Poltergeist\poltergeist_state_attack_hidden_inline.h" />
-    <ClInclude Include="ai\Monsters\Poltergeist\poltergeist_state_manager.h" />
-    <ClInclude Include="ai\Monsters\Poltergeist\poltergeist_state_rest.h" />
-    <ClInclude Include="ai\Monsters\Pseudodog\pseudodog.h" />
-    <ClInclude Include="ai\Monsters\Pseudodog\pseudodog_psi_effector.h" />
-    <ClInclude Include="ai\Monsters\Pseudodog\pseudodog_state_manager.h" />
-    <ClInclude Include="ai\Monsters\Pseudodog\psy_dog.h" />
-    <ClInclude Include="ai\Monsters\Pseudodog\psy_dog_aura.h" />
-    <ClInclude Include="ai\Monsters\Pseudodog\psy_dog_state_manager.h" />
-    <ClInclude Include="ai\Monsters\Pseudodog\psy_dog_state_psy_attack.h" />
-    <ClInclude Include="ai\Monsters\Pseudodog\psy_dog_state_psy_attack_hide.h" />
-    <ClInclude Include="ai\Monsters\Pseudodog\psy_dog_state_psy_attack_hide_inline.h" />
-    <ClInclude Include="ai\Monsters\Pseudodog\psy_dog_state_psy_attack_inline.h" />
-    <ClInclude Include="ai\Monsters\PseudoGigant\pseudogigant_state_manager.h" />
-    <ClInclude Include="ai\Monsters\PseudoGigant\pseudo_gigant.h" />
-    <ClInclude Include="ai\Monsters\PseudoGigant\pseudo_gigant_step_effector.h" />
-    <ClInclude Include="ai\Monsters\psy_aura.h" />
-    <ClInclude Include="ai\monsters\rats\ai_rat.h" />
-    <ClInclude Include="ai\monsters\rats\ai_rat_impl.h" />
-    <ClInclude Include="ai\monsters\rats\ai_rat_inline.h" />
-    <ClInclude Include="ai\monsters\rats\ai_rat_space.h" />
-    <ClInclude Include="ai\Monsters\scanning_ability.h" />
-    <ClInclude Include="ai\Monsters\scanning_ability_inline.h" />
-    <ClInclude Include="ai\Monsters\Snork\snork.h" />
-    <ClInclude Include="ai\Monsters\Snork\snork_jump.h" />
-    <ClInclude Include="ai\Monsters\Snork\snork_state_manager.h" />
-    <ClInclude Include="ai\Monsters\state.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_attack.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_attack_camp.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_attack_camp_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_attack_camp_stealout.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_attack_camp_stealout_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_attack_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_attack_melee.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_attack_melee_inline.h" />
-    <ClInclude Include="ai\monsters\states\monster_state_attack_on_run.h" />
-    <ClInclude Include="ai\monsters\states\monster_state_attack_on_run_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_attack_run.h" />
-    <ClInclude Include="ai\monsters\states\monster_state_attack_run_attack.h" />
-    <ClInclude Include="ai\monsters\states\monster_state_attack_run_attack_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_attack_run_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_controlled.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_controlled_attack.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_controlled_attack_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_controlled_follow.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_controlled_follow_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_controlled_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_eat.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_eat_drag.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_eat_drag_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_eat_eat.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_eat_eat_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_eat_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_find_enemy.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_find_enemy_angry.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_find_enemy_angry_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_find_enemy_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_find_enemy_look.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_find_enemy_look_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_find_enemy_run.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_find_enemy_run_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_find_enemy_walk.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_find_enemy_walk_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_hear_danger_sound.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_hear_danger_sound_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_hear_int_sound.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_hear_int_sound_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_help_sound.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_help_sound_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_hitted.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_hitted_hide.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_hitted_hide_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_hitted_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_hitted_moveout.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_hitted_moveout_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_home_point_attack.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_home_point_attack_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_home_point_danger.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_home_point_danger_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_home_point_rest.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_home_point_rest_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_panic.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_panic_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_panic_run.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_panic_run_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_rest.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_rest_fun.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_rest_fun_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_rest_idle.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_rest_idle_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_rest_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_rest_sleep.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_rest_sleep_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_rest_walk_graph.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_rest_walk_graph_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_smart_terrain_task.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_smart_terrain_task_graph_walk.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_smart_terrain_task_graph_walk_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_smart_terrain_task_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_squad_rest.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_squad_rest_follow.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_squad_rest_follow_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_squad_rest_inline.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_steal.h" />
-    <ClInclude Include="ai\Monsters\States\monster_state_steal_inline.h" />
-    <ClInclude Include="ai\Monsters\States\state_custom_action.h" />
-    <ClInclude Include="ai\Monsters\States\state_custom_action_inline.h" />
-    <ClInclude Include="ai\Monsters\States\state_custom_action_look.h" />
-    <ClInclude Include="ai\Monsters\States\state_custom_action_look_inline.h" />
-    <ClInclude Include="ai\Monsters\States\state_data.h" />
-    <ClInclude Include="ai\Monsters\States\state_hide_from_point.h" />
-    <ClInclude Include="ai\Monsters\States\state_hide_from_point_inline.h" />
-    <ClInclude Include="ai\Monsters\States\state_hit_object.h" />
-    <ClInclude Include="ai\Monsters\States\state_hit_object_inline.h" />
-    <ClInclude Include="ai\Monsters\States\state_look_point.h" />
-    <ClInclude Include="ai\Monsters\States\state_look_point_inline.h" />
-    <ClInclude Include="ai\Monsters\States\state_look_unprotected_area.h" />
-    <ClInclude Include="ai\Monsters\States\state_look_unprotected_area_inline.h" />
-    <ClInclude Include="ai\Monsters\States\state_move_around_point.h" />
-    <ClInclude Include="ai\Monsters\States\state_move_around_point_inline.h" />
-    <ClInclude Include="ai\Monsters\States\state_move_to_point.h" />
-    <ClInclude Include="ai\Monsters\States\state_move_to_point_inline.h" />
-    <ClInclude Include="ai\Monsters\States\state_move_to_restrictor.h" />
-    <ClInclude Include="ai\Monsters\States\state_move_to_restrictor_inline.h" />
-    <ClInclude Include="ai\Monsters\States\state_test_look_actor.h" />
-    <ClInclude Include="ai\Monsters\States\state_test_look_actor_inline.h" />
-    <ClInclude Include="ai\Monsters\States\state_test_state.h" />
-    <ClInclude Include="ai\Monsters\States\state_test_state_inline.h" />
-    <ClInclude Include="ai\Monsters\state_defs.h" />
-    <ClInclude Include="ai\Monsters\state_inline.h" />
-    <ClInclude Include="ai\Monsters\state_manager.h" />
-    <ClInclude Include="ai\Monsters\telekinesis.h" />
-    <ClInclude Include="ai\Monsters\telekinesis_inline.h" />
-    <ClInclude Include="ai\Monsters\telekinetic_object.h" />
-    <ClInclude Include="ai\Monsters\Tushkano\tushkano.h" />
-    <ClInclude Include="ai\Monsters\Tushkano\tushkano_state_manager.h" />
-    <ClInclude Include="ai\Monsters\Zombie\zombie.h" />
-    <ClInclude Include="ai\Monsters\Zombie\zombie_state_attack_run.h" />
-    <ClInclude Include="ai\Monsters\Zombie\zombie_state_attack_run_inline.h" />
-    <ClInclude Include="ai\Monsters\Zombie\zombie_state_manager.h" />
-    <ClInclude Include="ai\phantom\phantom.h" />
-    <ClInclude Include="ai\position_prediction.h" />
-    <ClInclude Include="Ai\Stalker\ai_stalker.h" />
-    <ClInclude Include="ai\stalker\ai_stalker_impl.h" />
-    <ClInclude Include="ai\stalker\ai_stalker_inline.h" />
-    <ClInclude Include="Ai\Stalker\ai_stalker_space.h" />
-    <ClInclude Include="Ai\Trader\ai_trader.h" />
-    <ClInclude Include="ai\trader\trader_animation.h" />
     <ClInclude Include="ai\weighted_random.h" />
-    <ClInclude Include="ai_debug.h" />
-    <ClInclude Include="ai_debug_variables.h" />
-    <ClInclude Include="ai_monster_space.h" />
-    <ClInclude Include="ai_object_location.h" />
-    <ClInclude Include="ai_object_location_impl.h" />
-    <ClInclude Include="ai_object_location_inline.h" />
     <ClInclude Include="ai_obstacle.h" />
     <ClInclude Include="ai_obstacle_inline.h" />
     <ClInclude Include="AI_PhraseDialogManager.h" />
-    <ClInclude Include="ai_space.h" />
-    <ClInclude Include="ai_space_inline.h" />
-    <ClInclude Include="alife_abstract_registry.h" />
-    <ClInclude Include="alife_abstract_registry_inline.h" />
-    <ClInclude Include="alife_combat_manager.h" />
-    <ClInclude Include="alife_combat_manager_inline.h" />
-    <ClInclude Include="alife_communication_manager.h" />
-    <ClInclude Include="alife_communication_manager_inline.h" />
-    <ClInclude Include="alife_communication_space.h" />
-    <ClInclude Include="alife_graph_registry.h" />
-    <ClInclude Include="alife_graph_registry_inline.h" />
-    <ClInclude Include="alife_group_registry.h" />
-    <ClInclude Include="alife_group_registry_inline.h" />
-    <ClInclude Include="alife_human_brain_save.h" />
-    <ClInclude Include="alife_human_object_handler.h" />
-    <ClInclude Include="alife_human_object_handler_inline.h" />
-    <ClInclude Include="alife_human_object_handler_save.h" />
-    <ClInclude Include="alife_interaction_manager.h" />
-    <ClInclude Include="alife_interaction_manager_inline.h" />
-    <ClInclude Include="alife_level_registry.h" />
-    <ClInclude Include="alife_level_registry_inline.h" />
-    <ClInclude Include="alife_monster_detail_path_manager.h" />
-    <ClInclude Include="alife_monster_detail_path_manager_inline.h" />
-    <ClInclude Include="alife_monster_movement_manager.h" />
-    <ClInclude Include="alife_monster_movement_manager_inline.h" />
-    <ClInclude Include="alife_monster_patrol_path_manager.h" />
-    <ClInclude Include="alife_monster_patrol_path_manager_inline.h" />
-    <ClInclude Include="alife_object_registry.h" />
-    <ClInclude Include="alife_object_registry_inline.h" />
-    <ClInclude Include="alife_online_offline_group_brain.h" />
-    <ClInclude Include="alife_online_offline_group_brain_inline.h" />
-    <ClInclude Include="alife_registry_container.h" />
-    <ClInclude Include="alife_registry_container_composition.h" />
-    <ClInclude Include="alife_registry_container_inline.h" />
-    <ClInclude Include="alife_registry_container_space.h" />
-    <ClInclude Include="alife_registry_wrapper.h" />
-    <ClInclude Include="alife_registry_wrappers.h" />
-    <ClInclude Include="alife_schedule_registry.h" />
-    <ClInclude Include="alife_schedule_registry_inline.h" />
-    <ClInclude Include="alife_simulator.h" />
-    <ClInclude Include="alife_simulator_base.h" />
-    <ClInclude Include="alife_simulator_base_inline.h" />
-    <ClInclude Include="alife_simulator_header.h" />
-    <ClInclude Include="alife_simulator_header_inline.h" />
-    <ClInclude Include="alife_simulator_inline.h" />
-    <ClInclude Include="alife_smart_terrain_registry.h" />
-    <ClInclude Include="alife_smart_terrain_registry_inline.h" />
-    <ClInclude Include="alife_smart_terrain_task.h" />
-    <ClInclude Include="alife_smart_terrain_task_inline.h" />
-    <ClInclude Include="alife_spawn_registry.h" />
-    <ClInclude Include="alife_spawn_registry_header.h" />
-    <ClInclude Include="alife_spawn_registry_header_inline.h" />
-    <ClInclude Include="alife_spawn_registry_inline.h" />
-    <ClInclude Include="alife_storage_manager.h" />
-    <ClInclude Include="alife_storage_manager_inline.h" />
-    <ClInclude Include="alife_story_registry.h" />
-    <ClInclude Include="alife_story_registry_inline.h" />
-    <ClInclude Include="alife_surge_manager.h" />
-    <ClInclude Include="alife_surge_manager_inline.h" />
-    <ClInclude Include="alife_switch_manager.h" />
-    <ClInclude Include="alife_switch_manager_inline.h" />
-    <ClInclude Include="alife_time_manager.h" />
-    <ClInclude Include="alife_time_manager_inline.h" />
-    <ClInclude Include="alife_update_manager.h" />
-    <ClInclude Include="alife_update_manager_inline.h" />
     <ClInclude Include="ammunition_groups.h" />
     <ClInclude Include="animation_movement_controller.h" />
     <ClInclude Include="animation_script_callback.h" />
@@ -766,8 +312,6 @@
     <ClInclude Include="autosave_manager.h" />
     <ClInclude Include="autosave_manager_inline.h" />
     <ClInclude Include="awards_store.h" />
-    <ClInclude Include="a_star.h" />
-    <ClInclude Include="a_star_inline.h" />
     <ClInclude Include="base_client_classes_wrappers.h" />
     <ClInclude Include="BastArtifact.h" />
     <ClInclude Include="best_scores_helper.h" />
@@ -780,8 +324,6 @@
     <ClInclude Include="bone_groups.h" />
     <ClInclude Include="BottleItem.h" />
     <ClInclude Include="BreakableObject.h" />
-    <ClInclude Include="builder_allocator_constructor.h" />
-    <ClInclude Include="builder_allocator_constructor_inline.h" />
     <ClInclude Include="callback_info.h" />
     <ClInclude Include="CameraEffector.h" />
     <ClInclude Include="CameraFirstEye.h" />
@@ -805,97 +347,39 @@
     <ClInclude Include="client_spawn_manager_inline.h" />
     <ClInclude Include="ClimableObject.h" />
     <ClInclude Include="command_switch_counter.h" />
-    <ClInclude Include="condition_state.h" />
-    <ClInclude Include="condition_state_inline.h" />
     <ClInclude Include="configs_common.h" />
     <ClInclude Include="configs_dumper.h" />
     <ClInclude Include="configs_dump_verifyer.h" />
-    <ClInclude Include="controller_state_panic_inline.h" />
-    <ClInclude Include="control_action.h" />
-    <ClInclude Include="control_action_inline.h" />
-    <ClInclude Include="cover_evaluators.h" />
-    <ClInclude Include="cover_evaluators_inline.h" />
-    <ClInclude Include="cover_manager.h" />
-    <ClInclude Include="cover_manager_inline.h" />
-    <ClInclude Include="cover_point.h" />
-    <ClInclude Include="cover_point_inline.h" />
     <ClInclude Include="cta_game_artefact.h" />
     <ClInclude Include="cta_game_artefact_activation.h" />
     <ClInclude Include="CustomDetector.h" />
-    <ClInclude Include="CustomMonster.h" />
-    <ClInclude Include="CustomMonster_inline.h" />
     <ClInclude Include="CustomOutfit.h" />
     <ClInclude Include="CustomRocket.h" />
     <ClInclude Include="CustomZone.h" />
     <ClInclude Include="DamagableItem.h" />
-    <ClInclude Include="damage_manager.h" />
-    <ClInclude Include="danger_cover_location.h" />
-    <ClInclude Include="danger_cover_location_inline.h" />
-    <ClInclude Include="danger_explosive.h" />
-    <ClInclude Include="danger_explosive_inline.h" />
-    <ClInclude Include="danger_location.h" />
-    <ClInclude Include="danger_location_inline.h" />
-    <ClInclude Include="danger_manager.h" />
-    <ClInclude Include="danger_manager_inline.h" />
-    <ClInclude Include="danger_object.h" />
-    <ClInclude Include="danger_object_inline.h" />
-    <ClInclude Include="danger_object_location.h" />
-    <ClInclude Include="danger_object_location_inline.h" />
-    <ClInclude Include="data_storage_binary_heap.h" />
-    <ClInclude Include="data_storage_binary_heap_inline.h" />
-    <ClInclude Include="data_storage_bucket_list.h" />
-    <ClInclude Include="data_storage_bucket_list_inline.h" />
-    <ClInclude Include="data_storage_constructor.h" />
-    <ClInclude Include="data_storage_double_linked_list.h" />
-    <ClInclude Include="data_storage_double_linked_list_inline.h" />
-    <ClInclude Include="data_storage_single_linked_list.h" />
-    <ClInclude Include="data_storage_single_linked_list_inline.h" />
     <ClInclude Include="date_time.h" />
     <ClInclude Include="death_anims.h" />
     <ClInclude Include="debug_renderer.h" />
     <ClInclude Include="debug_renderer_inline.h" />
-    <ClInclude Include="debug_text_tree.h" />
-    <ClInclude Include="debug_text_tree_inline.h" />
     <ClInclude Include="DelayedActionFuse.h" />
     <ClInclude Include="DemoInfo.h" />
     <ClInclude Include="DemoInfo_Loader.h" />
     <ClInclude Include="DemoPlay_Control.h" />
     <ClInclude Include="DestroyablePhysicsObject.h" />
-    <ClInclude Include="detail_path_builder.h" />
-    <ClInclude Include="detail_path_manager.h" />
-    <ClInclude Include="detail_path_manager_inline.h" />
-    <ClInclude Include="detail_path_manager_space.h" />
-    <ClInclude Include="dijkstra.h" />
-    <ClInclude Include="dijkstra_inline.h" />
-    <ClInclude Include="doors.h" />
-    <ClInclude Include="doors_actor.h" />
-    <ClInclude Include="doors_door.h" />
-    <ClInclude Include="doors_manager.h" />
     <ClInclude Include="double_shot_double_kill.h" />
     <ClInclude Include="DummyArtifact.h" />
     <ClInclude Include="DynamicHeightMap.h" />
-    <ClInclude Include="dynamic_obstacles_avoider.h" />
-    <ClInclude Include="dynamic_obstacles_avoider_inline.h" />
     <ClInclude Include="eatable_item.h" />
     <ClInclude Include="eatable_item_object.h" />
-    <ClInclude Include="edge_path.h" />
-    <ClInclude Include="edge_path_inline.h" />
     <ClInclude Include="EffectorBobbing.h" />
     <ClInclude Include="EffectorFall.h" />
     <ClInclude Include="EffectorShot.h" />
     <ClInclude Include="EffectorShotX.h" />
     <ClInclude Include="EffectorZoomInertion.h" />
-    <ClInclude Include="ef_base.h" />
-    <ClInclude Include="ef_pattern.h" />
-    <ClInclude Include="ef_primary.h" />
-    <ClInclude Include="ef_storage.h" />
-    <ClInclude Include="ef_storage_inline.h" />
     <ClInclude Include="ElectricBall.h" />
     <ClInclude Include="EliteDetector.h" />
     <ClInclude Include="encyclopedia_article.h" />
     <ClInclude Include="encyclopedia_article_defs.h" />
-    <ClInclude Include="enemy_manager.h" />
-    <ClInclude Include="enemy_manager_inline.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityCondition.h" />
     <ClInclude Include="entity_alive.h" />
@@ -961,16 +445,8 @@
     <ClInclude Include="game_cl_teamdeathmatch.h" />
     <ClInclude Include="game_cl_teamdeathmatch_snd_messages.h" />
     <ClInclude Include="game_events_handler.h" />
-    <ClInclude Include="game_graph.h" />
-    <ClInclude Include="game_graph_inline.h" />
-    <ClInclude Include="game_level_cross_table.h" />
-    <ClInclude Include="game_level_cross_table_inline.h" />
-    <ClInclude Include="game_location_selector.h" />
-    <ClInclude Include="game_location_selector_inline.h" />
     <ClInclude Include="game_news.h" />
     <ClInclude Include="game_object_space.h" />
-    <ClInclude Include="game_path_manager.h" />
-    <ClInclude Include="game_path_manager_inline.h" />
     <ClInclude Include="game_state_accumulator.h" />
     <ClInclude Include="game_state_accumulator_inline.h" />
     <ClInclude Include="game_sv_artefacthunt.h" />
@@ -986,15 +462,6 @@
     <ClInclude Include="game_sv_single.h" />
     <ClInclude Include="game_sv_teamdeathmatch.h" />
     <ClInclude Include="GlobalFeelTouch.hpp" />
-    <CustomBuild Include="graph_abstract.h" />
-    <CustomBuild Include="graph_abstract_inline.h" />
-    <ClInclude Include="graph_edge.h" />
-    <ClInclude Include="graph_edge_inline.h" />
-    <ClInclude Include="graph_engine.h" />
-    <ClInclude Include="graph_engine_inline.h" />
-    <ClInclude Include="graph_engine_space.h" />
-    <ClInclude Include="graph_vertex.h" />
-    <ClInclude Include="graph_vertex_inline.h" />
     <ClInclude Include="GraviArtifact.h" />
     <ClInclude Include="GraviZone.h" />
     <ClInclude Include="Grenade.h" />
@@ -1012,8 +479,6 @@
     <ClInclude Include="hits_store_inline.h" />
     <ClInclude Include="hit_immunity.h" />
     <ClInclude Include="hit_immunity_space.h" />
-    <ClInclude Include="hit_memory_manager.h" />
-    <ClInclude Include="hit_memory_manager_inline.h" />
     <ClInclude Include="holder_custom.h" />
     <ClInclude Include="HUDCrosshair.h" />
     <ClInclude Include="HudItem.h" />
@@ -1060,20 +525,7 @@
     <ClInclude Include="inventory_item_object.h" />
     <ClInclude Include="inventory_item_object_inline.h" />
     <ClInclude Include="inventory_owner_inline.h" />
-    <ClInclude Include="inventory_upgrade.h" />
-    <ClInclude Include="inventory_upgrade_base.h" />
-    <ClInclude Include="inventory_upgrade_base_inline.h" />
-    <ClInclude Include="inventory_upgrade_group.h" />
-    <ClInclude Include="inventory_upgrade_group_inline.h" />
-    <ClInclude Include="inventory_upgrade_inline.h" />
-    <ClInclude Include="inventory_upgrade_manager.h" />
-    <ClInclude Include="inventory_upgrade_manager_inline.h" />
-    <ClInclude Include="inventory_upgrade_property.h" />
-    <ClInclude Include="inventory_upgrade_property_inline.h" />
-    <ClInclude Include="inventory_upgrade_root.h" />
-    <ClInclude Include="inventory_upgrade_root_inline.h" />
     <ClInclude Include="invincible_fury.h" />
-    <ClInclude Include="item_manager.h" />
     <ClInclude Include="killer_victim_velocity_angle.h" />
     <ClInclude Include="kills_store.h" />
     <ClInclude Include="kills_store_inline.h" />
@@ -1081,20 +533,9 @@
     <ClInclude Include="Level_Bullet_Manager.h" />
     <ClInclude Include="level_changer.h" />
     <ClInclude Include="level_debug.h" />
-    <ClInclude Include="level_graph.h" />
-    <ClInclude Include="level_graph_inline.h" />
-    <ClInclude Include="level_graph_space.h" />
-    <ClInclude Include="level_graph_vertex_inline.h" />
-    <ClInclude Include="level_location_selector.h" />
-    <ClInclude Include="level_location_selector_inline.h" />
     <ClInclude Include="Level_network_Demo.h" />
     <ClInclude Include="Level_network_map_sync.h" />
-    <ClInclude Include="level_path_builder.h" />
-    <ClInclude Include="level_path_manager.h" />
-    <ClInclude Include="level_path_manager_inline.h" />
     <ClInclude Include="level_sounds.h" />
-    <ClInclude Include="location_manager.h" />
-    <ClInclude Include="location_manager_inline.h" />
     <ClInclude Include="login_manager.h" />
     <ClInclude Include="magic_box3.h" />
     <ClInclude Include="magic_box3_inline.h" />
@@ -1103,25 +544,11 @@
     <ClInclude Include="magic_minimize_nd.h" />
     <ClInclude Include="magic_minimize_nd_inline.h" />
     <ClInclude Include="MainMenu.h" />
-    <ClInclude Include="manager_builder_allocator_constructor.h" />
-    <ClInclude Include="manager_builder_allocator_constructor_inline.h" />
     <ClInclude Include="map_location.h" />
     <ClInclude Include="map_location_defs.h" />
     <ClInclude Include="map_manager.h" />
     <ClInclude Include="map_spot.h" />
-    <ClInclude Include="material_manager.h" />
-    <ClInclude Include="material_manager_inline.h" />
     <ClInclude Include="medkit.h" />
-    <ClInclude Include="member_corpse.h" />
-    <ClInclude Include="member_corpse_inline.h" />
-    <ClInclude Include="member_enemy.h" />
-    <ClInclude Include="member_enemy_inline.h" />
-    <ClInclude Include="member_order.h" />
-    <ClInclude Include="member_order_inline.h" />
-    <ClInclude Include="memory_manager.h" />
-    <ClInclude Include="memory_manager_inline.h" />
-    <ClInclude Include="memory_space.h" />
-    <ClInclude Include="memory_space_impl.h" />
     <ClInclude Include="MercuryBall.h" />
     <ClInclude Include="Message_Filter.h" />
     <ClInclude Include="MilitaryOutfit.h" />
@@ -1131,82 +558,21 @@
     <ClInclude Include="mixed_delegate_unique_tags.h" />
     <ClInclude Include="monster_community.h" />
     <ClInclude Include="MosquitoBald.h" />
-    <ClInclude Include="movement_manager.h" />
-    <ClInclude Include="movement_manager_impl.h" />
-    <ClInclude Include="movement_manager_inline.h" />
-    <ClInclude Include="movement_manager_space.h" />
     <ClInclude Include="moving_bones_snd_player.h" />
-    <ClInclude Include="moving_object.h" />
-    <ClInclude Include="moving_objects.h" />
-    <ClInclude Include="moving_objects_impl.h" />
-    <ClInclude Include="moving_objects_inline.h" />
-    <ClInclude Include="moving_object_inline.h" />
     <ClInclude Include="MPPlayersBag.h" />
     <ClInclude Include="mp_config_sections.h" />
     <ClInclude Include="mt_config.h" />
     <ClInclude Include="Needles.h" />
     <ClInclude Include="NET_Queue.h" />
     <ClInclude Include="NoGravityZone.h" />
-    <ClInclude Include="object_actions.h" />
-    <ClInclude Include="object_actions_inline.h" />
-    <ClInclude Include="object_handler.h" />
-    <ClInclude Include="object_handler_inline.h" />
-    <ClInclude Include="object_handler_planner.h" />
-    <ClInclude Include="object_handler_planner_impl.h" />
-    <ClInclude Include="object_handler_planner_inline.h" />
-    <ClInclude Include="object_handler_space.h" />
-    <ClInclude Include="object_manager.h" />
-    <ClInclude Include="object_manager_inline.h" />
-    <ClInclude Include="object_property_evaluators.h" />
-    <ClInclude Include="object_property_evaluators_inline.h" />
     <ClInclude Include="obsolete_queue.h" />
     <ClInclude Include="obsolete_queue_inline.h" />
-    <ClInclude Include="obstacles_query.h" />
-    <ClInclude Include="obstacles_query_inline.h" />
-    <ClInclude Include="operator_abstract.h" />
-    <ClInclude Include="operator_abstract_inline.h" />
-    <ClInclude Include="operator_condition.h" />
-    <ClInclude Include="operator_condition_inline.h" />
     <ClInclude Include="ParticlesObject.h" />
     <ClInclude Include="ParticlesPlayer.h" />
     <ClInclude Include="particle_params.h" />
     <ClInclude Include="particle_params_inline.h" />
-    <ClInclude Include="path_manager.h" />
-    <ClInclude Include="path_manager_game.h" />
-    <ClInclude Include="path_manager_game_inline.h" />
-    <ClInclude Include="path_manager_game_level.h" />
-    <ClInclude Include="path_manager_game_level_inline.h" />
-    <ClInclude Include="path_manager_game_vertex.h" />
-    <ClInclude Include="path_manager_game_vertex_inline.h" />
-    <ClInclude Include="path_manager_generic.h" />
-    <ClInclude Include="path_manager_generic_inline.h" />
-    <ClInclude Include="path_manager_level.h" />
-    <ClInclude Include="path_manager_level_flooder.h" />
-    <ClInclude Include="path_manager_level_flooder_inline.h" />
-    <ClInclude Include="path_manager_level_inline.h" />
-    <ClInclude Include="path_manager_level_nearest_vertex.h" />
-    <ClInclude Include="path_manager_level_nearest_vertex_inline.h" />
-    <ClInclude Include="path_manager_level_straight_line.h" />
-    <ClInclude Include="path_manager_level_straight_line_inline.h" />
-    <ClInclude Include="path_manager_params.h" />
-    <ClInclude Include="path_manager_params_flooder.h" />
-    <ClInclude Include="path_manager_params_game_level.h" />
-    <ClInclude Include="path_manager_params_game_vertex.h" />
-    <ClInclude Include="path_manager_params_nearest_vertex.h" />
-    <ClInclude Include="path_manager_params_straight_line.h" />
-    <ClInclude Include="path_manager_solver.h" />
-    <ClInclude Include="path_manager_solver_inline.h" />
-    <ClInclude Include="patrol_path.h" />
-    <ClInclude Include="patrol_path_inline.h" />
-    <ClInclude Include="patrol_path_manager.h" />
-    <ClInclude Include="patrol_path_manager_inline.h" />
-    <ClInclude Include="patrol_path_manager_space.h" />
     <ClInclude Include="patrol_path_params.h" />
     <ClInclude Include="patrol_path_params_inline.h" />
-    <ClInclude Include="patrol_path_storage.h" />
-    <ClInclude Include="patrol_path_storage_inline.h" />
-    <ClInclude Include="patrol_point.h" />
-    <ClInclude Include="patrol_point_inline.h" />
     <ClInclude Include="PDA.h" />
     <ClInclude Include="PdaMsg.h" />
     <ClInclude Include="pda_space.h" />
@@ -1265,20 +631,10 @@
     <ClInclude Include="PostprocessAnimator.h" />
     <ClInclude Include="pp_effector_custom.h" />
     <ClInclude Include="pp_effector_distance.h" />
-    <ClInclude Include="problem_solver.h" />
-    <ClInclude Include="problem_solver_inline.h" />
     <ClInclude Include="profiler.h" />
     <ClInclude Include="profiler_inline.h" />
     <ClInclude Include="profile_data_types.h" />
     <ClInclude Include="profile_store.h" />
-    <ClInclude Include="property_evaluator.h" />
-    <ClInclude Include="property_evaluator_const.h" />
-    <ClInclude Include="property_evaluator_const_inline.h" />
-    <ClInclude Include="property_evaluator_inline.h" />
-    <ClInclude Include="property_evaluator_member.h" />
-    <ClInclude Include="property_evaluator_member_inline.h" />
-    <ClInclude Include="property_storage.h" />
-    <ClInclude Include="property_storage_inline.h" />
     <ClInclude Include="purchase_list.h" />
     <ClInclude Include="purchase_list_inline.h" />
     <ClInclude Include="quadtree.h" />
@@ -1286,20 +642,10 @@
     <ClInclude Include="queued_async_method.h" />
     <ClInclude Include="RadioactiveZone.h" />
     <ClInclude Include="random32.h" />
-    <ClInclude Include="rat_states.h" />
-    <ClInclude Include="rat_state_base.h" />
-    <ClInclude Include="rat_state_base_inline.h" />
-    <ClInclude Include="rat_state_manager.h" />
-    <ClInclude Include="rat_state_manager_inline.h" />
-    <ClInclude Include="refreshable_obstacles_query.h" />
-    <ClInclude Include="refreshable_obstacles_query_inline.h" />
     <ClInclude Include="RegistryFuncs.h" />
     <ClInclude Include="relation_registry.h" />
     <ClInclude Include="relation_registry_defs.h" />
     <ClInclude Include="relation_registry_inline.h" />
-    <ClInclude Include="restricted_object.h" />
-    <ClInclude Include="restricted_object_inline.h" />
-    <ClInclude Include="restricted_object_obstacle.h" />
     <ClInclude Include="rewarding_events_handlers.h" />
     <ClInclude Include="rewarding_state_events.h" />
     <ClInclude Include="reward_event_generator.h" />
@@ -1309,10 +655,6 @@
     <ClInclude Include="RGD5.h" />
     <ClInclude Include="RocketLauncher.h" />
     <ClInclude Include="RustyHairArtifact.h" />
-    <ClInclude Include="safe_map_iterator.h" />
-    <ClInclude Include="safe_map_iterator_inline.h" />
-    <ClInclude Include="saved_game_wrapper.h" />
-    <ClInclude Include="saved_game_wrapper_inline.h" />
     <ClInclude Include="ScientificOutfit.h" />
     <ClInclude Include="Scope.h" />
     <ClInclude Include="screenshots_common.h" />
@@ -1324,16 +666,8 @@
     <ClInclude Include="script_abstract_action_inline.h" />
     <ClInclude Include="script_action_condition.h" />
     <ClInclude Include="script_action_condition_inline.h" />
-    <ClInclude Include="script_action_planner_action_wrapper.h" />
-    <ClInclude Include="script_action_planner_action_wrapper_inline.h" />
-    <ClInclude Include="script_action_planner_wrapper.h" />
-    <ClInclude Include="script_action_planner_wrapper_inline.h" />
-    <ClInclude Include="script_action_wrapper.h" />
-    <ClInclude Include="script_action_wrapper_inline.h" />
     <ClInclude Include="script_animation_action.h" />
     <ClInclude Include="script_animation_action_inline.h" />
-    <ClInclude Include="script_binder.h" />
-    <ClInclude Include="script_binder_inline.h" />
     <ClInclude Include="script_binder_object.h" />
     <ClInclude Include="script_binder_object_wrapper.h" />
     <ClInclude Include="script_bind_macroses.h" />
@@ -1342,11 +676,8 @@
     <ClInclude Include="script_effector_inline.h" />
     <ClInclude Include="script_effector_wrapper.h" />
     <ClInclude Include="script_effector_wrapper_inline.h" />
-    <ClInclude Include="script_entity.h" />
     <ClInclude Include="script_entity_action.h" />
     <ClInclude Include="script_entity_action_inline.h" />
-    <ClInclude Include="script_entity_inline.h" />
-    <ClInclude Include="script_entity_space.h" />
     <ClInclude Include="script_game_object.h" />
     <ClInclude Include="script_game_object_impl.h" />
     <ClInclude Include="script_hit.h" />
@@ -1356,15 +687,12 @@
     <ClInclude Include="script_monster_hit_info.h" />
     <ClInclude Include="script_movement_action.h" />
     <ClInclude Include="script_movement_action_inline.h" />
-    <ClInclude Include="script_object.h" />
     <ClInclude Include="script_object_action.h" />
     <ClInclude Include="script_object_action_inline.h" />
     <ClInclude Include="script_particles.h" />
     <ClInclude Include="script_particles_inline.h" />
     <ClInclude Include="script_particle_action.h" />
     <ClInclude Include="script_particle_action_inline.h" />
-    <ClInclude Include="script_property_evaluator_wrapper.h" />
-    <ClInclude Include="script_property_evaluator_wrapper_inline.h" />
     <ClInclude Include="script_sound.h" />
     <ClInclude Include="script_sound_action.h" />
     <ClInclude Include="script_sound_action_inline.h" />
@@ -1372,83 +700,17 @@
     <ClInclude Include="script_sound_inline.h" />
     <ClInclude Include="script_watch_action.h" />
     <ClInclude Include="script_watch_action_inline.h" />
-    <ClInclude Include="script_world_property.h" />
-    <ClInclude Include="script_world_property_inline.h" />
-    <ClInclude Include="script_world_state.h" />
     <ClInclude Include="script_zone.h" />
     <ClInclude Include="searchlight.h" />
     <ClInclude Include="secure_messaging.h" />
     <ClInclude Include="seniority_hierarchy_holder.h" />
     <ClInclude Include="seniority_hierarchy_holder_inline.h" />
     <ClInclude Include="seniority_hierarchy_space.h" />
-    <ClInclude Include="server_entity_wrapper.h" />
-    <ClInclude Include="server_entity_wrapper_inline.h" />
-    <ClInclude Include="setup_manager.h" />
-    <ClInclude Include="setup_manager_inline.h" />
     <ClInclude Include="ShootingObject.h" />
-    <ClInclude Include="sight_action.h" />
-    <ClInclude Include="sight_action_inline.h" />
-    <ClInclude Include="sight_control_action.h" />
-    <ClInclude Include="sight_control_action_inline.h" />
-    <ClInclude Include="sight_manager.h" />
-    <ClInclude Include="sight_manager_inline.h" />
-    <ClInclude Include="sight_manager_space.h" />
     <ClInclude Include="Silencer.h" />
     <ClInclude Include="silent_shots.h" />
     <ClInclude Include="SimpleDetector.h" />
-    <ClInclude Include="smart_cover.h" />
-    <ClInclude Include="smart_cover_action.h" />
-    <ClInclude Include="smart_cover_action_inline.h" />
-    <ClInclude Include="smart_cover_animation_planner.h" />
-    <ClInclude Include="smart_cover_animation_planner_inline.h" />
-    <ClInclude Include="smart_cover_animation_selector.h" />
-    <ClInclude Include="smart_cover_animation_selector_inline.h" />
-    <ClInclude Include="smart_cover_default_behaviour_planner.hpp" />
-    <ClInclude Include="smart_cover_default_behaviour_planner_inline.hpp" />
-    <ClInclude Include="smart_cover_description.h" />
-    <ClInclude Include="smart_cover_description_inline.h" />
-    <ClInclude Include="smart_cover_detail.h" />
-    <ClInclude Include="smart_cover_evaluators.h" />
-    <ClInclude Include="smart_cover_inline.h" />
-    <ClInclude Include="smart_cover_loophole.h" />
-    <ClInclude Include="smart_cover_loophole_inline.h" />
-    <ClInclude Include="smart_cover_loophole_planner_actions.h" />
-    <ClInclude Include="smart_cover_loophole_planner_actions_inline.h" />
-    <ClInclude Include="smart_cover_object.h" />
-    <ClInclude Include="smart_cover_object_inline.h" />
-    <ClInclude Include="smart_cover_planner_actions.h" />
-    <ClInclude Include="smart_cover_planner_actions_inline.h" />
-    <ClInclude Include="smart_cover_planner_target_provider.h" />
-    <ClInclude Include="smart_cover_planner_target_selector.h" />
-    <ClInclude Include="smart_cover_planner_target_selector_inline.h" />
-    <ClInclude Include="smart_cover_storage.h" />
-    <ClInclude Include="smart_cover_transition.hpp" />
-    <ClInclude Include="smart_cover_transition_animation.hpp" />
-    <ClInclude Include="smart_cover_transition_animation_inline.hpp" />
     <ClInclude Include="smart_zone.h" />
-    <ClInclude Include="sound_collection_storage.h" />
-    <ClInclude Include="sound_collection_storage_inline.h" />
-    <ClInclude Include="sound_memory_manager.h" />
-    <ClInclude Include="sound_memory_manager_inline.h" />
-    <ClInclude Include="sound_player.h" />
-    <ClInclude Include="sound_player_inline.h" />
-    <ClInclude Include="sound_user_data_visitor.h" />
-    <ClInclude Include="space_restriction.h" />
-    <ClInclude Include="space_restriction_abstract.h" />
-    <ClInclude Include="space_restriction_abstract_inline.h" />
-    <ClInclude Include="space_restriction_base.h" />
-    <ClInclude Include="space_restriction_base_inline.h" />
-    <ClInclude Include="space_restriction_bridge.h" />
-    <ClInclude Include="space_restriction_bridge_inline.h" />
-    <ClInclude Include="space_restriction_composition.h" />
-    <ClInclude Include="space_restriction_composition_inline.h" />
-    <ClInclude Include="space_restriction_holder.h" />
-    <ClInclude Include="space_restriction_holder_inline.h" />
-    <ClInclude Include="space_restriction_inline.h" />
-    <ClInclude Include="space_restriction_manager.h" />
-    <ClInclude Include="space_restriction_manager_inline.h" />
-    <ClInclude Include="space_restriction_shape.h" />
-    <ClInclude Include="space_restriction_shape_inline.h" />
     <ClInclude Include="space_restrictor.h" />
     <ClInclude Include="space_restrictor_inline.h" />
     <ClInclude Include="Spectator.h" />
@@ -1457,94 +719,16 @@
     <ClInclude Include="squad_hierarchy_holder.h" />
     <ClInclude Include="squad_hierarchy_holder_inline.h" />
     <ClInclude Include="StalkerOutfit.h" />
-    <ClInclude Include="stalker_alife_actions.h" />
-    <ClInclude Include="stalker_alife_planner.h" />
-    <ClInclude Include="stalker_alife_task_actions.h" />
-    <ClInclude Include="stalker_animation_data.h" />
-    <ClInclude Include="stalker_animation_data_storage.h" />
-    <ClInclude Include="stalker_animation_data_storage_inline.h" />
-    <ClInclude Include="stalker_animation_manager.h" />
-    <ClInclude Include="stalker_animation_manager_impl.h" />
-    <ClInclude Include="stalker_animation_manager_inline.h" />
-    <ClInclude Include="stalker_animation_names.h" />
-    <ClInclude Include="stalker_animation_pair.h" />
-    <ClInclude Include="stalker_animation_pair_inline.h" />
-    <ClInclude Include="stalker_animation_script.h" />
-    <ClInclude Include="stalker_animation_script_inline.h" />
-    <ClInclude Include="stalker_animation_state.h" />
-    <ClInclude Include="stalker_animation_state_inline.h" />
-    <ClInclude Include="stalker_anomaly_actions.h" />
-    <ClInclude Include="stalker_anomaly_planner.h" />
-    <ClInclude Include="stalker_base_action.h" />
-    <ClInclude Include="stalker_combat_actions.h" />
-    <ClInclude Include="stalker_combat_action_base.h" />
-    <ClInclude Include="stalker_combat_planner.h" />
-    <ClInclude Include="stalker_danger_by_sound_actions.h" />
-    <ClInclude Include="stalker_danger_by_sound_planner.h" />
-    <ClInclude Include="stalker_danger_grenade_actions.h" />
-    <ClInclude Include="stalker_danger_grenade_planner.h" />
-    <ClInclude Include="stalker_danger_in_direction_actions.h" />
-    <ClInclude Include="stalker_danger_in_direction_planner.h" />
-    <ClInclude Include="stalker_danger_planner.h" />
-    <ClInclude Include="stalker_danger_planner_inline.h" />
-    <ClInclude Include="stalker_danger_property_evaluators.h" />
-    <ClInclude Include="stalker_danger_unknown_actions.h" />
-    <ClInclude Include="stalker_danger_unknown_planner.h" />
-    <ClInclude Include="stalker_death_actions.h" />
-    <ClInclude Include="stalker_death_planner.h" />
-    <ClInclude Include="stalker_decision_space.h" />
     <ClInclude Include="stalker_flair.h" />
-    <ClInclude Include="stalker_get_distance_actions.h" />
-    <ClInclude Include="stalker_get_distance_planner.h" />
-    <ClInclude Include="stalker_kill_wounded_actions.h" />
-    <ClInclude Include="stalker_kill_wounded_planner.h" />
-    <ClInclude Include="stalker_low_cover_actions.h" />
-    <ClInclude Include="stalker_low_cover_planner.h" />
-    <ClInclude Include="stalker_movement_manager_base.h" />
-    <ClInclude Include="stalker_movement_manager_base_inline.h" />
-    <ClInclude Include="stalker_movement_manager_obstacles.h" />
-    <ClInclude Include="stalker_movement_manager_obstacles_inline.h" />
-    <ClInclude Include="stalker_movement_manager_smart_cover.h" />
-    <ClInclude Include="stalker_movement_manager_smart_cover_inline.h" />
-    <ClInclude Include="stalker_movement_manager_space.h" />
-    <ClInclude Include="stalker_movement_params.h" />
-    <ClInclude Include="stalker_movement_params_inline.h" />
-    <ClInclude Include="stalker_movement_restriction.h" />
-    <ClInclude Include="stalker_movement_restriction_inline.h" />
-    <ClInclude Include="stalker_planner.h" />
-    <ClInclude Include="stalker_planner_inline.h" />
-    <ClInclude Include="stalker_property_evaluators.h" />
-    <ClInclude Include="stalker_property_evaluators_inline.h" />
-    <ClInclude Include="stalker_search_actions.h" />
-    <ClInclude Include="stalker_search_planner.h" />
-    <ClInclude Include="stalker_sound_data.h" />
-    <ClInclude Include="stalker_sound_data_inline.h" />
-    <ClInclude Include="stalker_sound_data_visitor.h" />
-    <ClInclude Include="stalker_sound_data_visitor_inline.h" />
-    <ClInclude Include="stalker_velocity_collection.h" />
-    <ClInclude Include="stalker_velocity_collection_inline.h" />
-    <ClInclude Include="stalker_velocity_holder.h" />
-    <ClInclude Include="stalker_velocity_holder_inline.h" />
     <ClInclude Include="state_arguments_functions.h" />
     <ClInclude Include="static_cast_checked.hpp" />
-    <ClInclude Include="static_obstacles_avoider.h" />
-    <ClInclude Include="static_obstacles_avoider_inline.h" />
     <ClInclude Include="stats_submitter.h" />
     <ClInclude Include="StdAfx.h" />
-    <ClInclude Include="steering_behaviour.h" />
-    <ClInclude Include="steering_behaviour_alignment.h" />
-    <ClInclude Include="steering_behaviour_base.h" />
-    <ClInclude Include="steering_behaviour_base_inline.h" />
-    <ClInclude Include="steering_behaviour_cohesion.h" />
-    <ClInclude Include="steering_behaviour_separation.h" />
-    <ClInclude Include="step_manager.h" />
-    <ClInclude Include="step_manager_defs.h" />
     <ClInclude Include="string_table.h" />
     <ClInclude Include="string_table_defs.h" />
     <ClInclude Include="team_base_zone.h" />
     <ClInclude Include="team_hierarchy_holder.h" />
     <ClInclude Include="team_hierarchy_holder_inline.h" />
-    <ClInclude Include="TeleWhirlwind.h" />
     <ClInclude Include="ThornArtifact.h" />
     <ClInclude Include="Torch.h" />
     <ClInclude Include="TorridZone.h" />
@@ -1561,7 +745,6 @@
     <ClInclude Include="trade_parameters.h" />
     <ClInclude Include="trade_parameters_inline.h" />
     <ClInclude Include="traffic_optimization.h" />
-    <ClInclude Include="trajectories.h" />
     <ClInclude Include="UIAchivementsIndicator.h" />
     <ClInclude Include="UICursor.h" />
     <ClInclude Include="UIDialogHolder.h" />
@@ -1724,19 +907,6 @@
     <ClInclude Include="ui\xrUIXmlParser.h" />
     <ClInclude Include="ui_base.h" />
     <ClInclude Include="ui_defs.h" />
-    <ClInclude Include="vertex_allocator_fixed.h" />
-    <ClInclude Include="vertex_allocator_fixed_inline.h" />
-    <ClInclude Include="vertex_manager_fixed.h" />
-    <ClInclude Include="vertex_manager_fixed_inline.h" />
-    <ClInclude Include="vertex_manager_hash_fixed.h" />
-    <ClInclude Include="vertex_manager_hash_fixed_inline.h" />
-    <ClInclude Include="vertex_path.h" />
-    <ClInclude Include="vertex_path_inline.h" />
-    <ClInclude Include="vision_client.h" />
-    <ClInclude Include="vision_client_inline.h" />
-    <ClInclude Include="visual_memory_manager.h" />
-    <ClInclude Include="visual_memory_manager_inline.h" />
-    <ClInclude Include="visual_memory_params.h" />
     <ClInclude Include="wallmark_manager.h" />
     <ClInclude Include="Weapon.h" />
     <ClInclude Include="WeaponAK74.h" />
@@ -1768,8 +938,6 @@
     <ClInclude Include="WeaponVintorez.h" />
     <ClInclude Include="WeaponWalther.h" />
     <ClInclude Include="Wound.h" />
-    <ClInclude Include="wrapper_abstract.h" />
-    <ClInclude Include="wrapper_abstract_inline.h" />
     <ClInclude Include="xrClientsPool.h" />
     <ClInclude Include="xrGameSpyServer.h" />
     <ClInclude Include="xrGameSpyServer_callbacks.h" />
@@ -1791,9 +959,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\xrServerEntities\alife_human_brain.cpp" />
-    <ClCompile Include="..\xrServerEntities\alife_monster_brain.cpp" />
-    <ClCompile Include="..\xrServerEntities\alife_space.cpp" />
     <ClCompile Include="..\xrServerEntities\character_info.cpp" />
     <ClCompile Include="..\xrServerEntities\gametype_chooser.cpp" />
     <ClCompile Include="..\xrServerEntities\LevelGameDef.cpp" />
@@ -1927,18 +1092,6 @@
     <ClCompile Include="account_manager.cpp" />
     <ClCompile Include="account_manager_console.cpp" />
     <ClCompile Include="account_manager_script.cpp" />
-    <ClCompile Include="action_base_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="action_planner_action_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="action_planner_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="ActivatingCharCollisionDelay.cpp" />
     <ClCompile Include="Actor.cpp">
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
@@ -1987,374 +1140,10 @@
     <ClCompile Include="actor_statistic_mgr.cpp" />
     <ClCompile Include="Actor_Weapon.cpp" />
     <ClCompile Include="AdvancedDetector.cpp" />
-    <ClCompile Include="agent_corpse_manager.cpp" />
-    <ClCompile Include="agent_enemy_manager.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="agent_explosive_manager.cpp" />
-    <ClCompile Include="agent_location_manager.cpp" />
-    <ClCompile Include="agent_manager.cpp" />
-    <ClCompile Include="agent_manager_actions.cpp" />
-    <ClCompile Include="agent_manager_planner.cpp" />
-    <ClCompile Include="agent_manager_properties.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="agent_member_manager.cpp" />
-    <ClCompile Include="agent_memory_manager.cpp" />
-    <ClCompile Include="aimers_base.cpp" />
-    <ClCompile Include="aimers_weapon.cpp" />
-    <ClCompile Include="AI\ai_monsters_misc.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="AI\Crow\ai_crow.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\ai_monster_bones.cpp" />
     <ClCompile Include="ai\Monsters\ai_monster_effector.cpp" />
-    <ClCompile Include="ai\Monsters\ai_monster_motion_stats.cpp" />
-    <ClCompile Include="ai\Monsters\ai_monster_squad.cpp" />
-    <ClCompile Include="ai\Monsters\ai_monster_squad_attack.cpp" />
-    <ClCompile Include="ai\Monsters\ai_monster_squad_manager.cpp" />
-    <ClCompile Include="ai\Monsters\ai_monster_squad_rest.cpp" />
-    <ClCompile Include="ai\Monsters\ai_monster_utils.cpp" />
-    <ClCompile Include="ai\Monsters\anim_triple.cpp" />
-    <ClCompile Include="ai\Monsters\anomaly_detector.cpp" />
-    <ClCompile Include="ai\monsters\anti_aim_ability.cpp" />
-    <ClCompile Include="ai\Monsters\BaseMonster\base_monster.cpp" />
-    <ClCompile Include="ai\Monsters\BaseMonster\base_monster_anim.cpp" />
-    <ClCompile Include="ai\Monsters\BaseMonster\base_monster_debug.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\BaseMonster\base_monster_feel.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\BaseMonster\base_monster_misc.cpp" />
-    <ClCompile Include="ai\Monsters\BaseMonster\base_monster_net.cpp" />
-    <ClCompile Include="ai\Monsters\BaseMonster\base_monster_path.cpp" />
-    <ClCompile Include="ai\Monsters\BaseMonster\base_monster_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\BaseMonster\base_monster_startup.cpp" />
-    <ClCompile Include="ai\Monsters\BaseMonster\base_monster_think.cpp" />
-    <ClCompile Include="ai\Monsters\Bloodsucker\bloodsucker.cpp" />
-    <ClCompile Include="ai\Monsters\Bloodsucker\bloodsucker_alien.cpp" />
-    <ClCompile Include="ai\Monsters\Bloodsucker\bloodsucker_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Bloodsucker\bloodsucker_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\Bloodsucker\bloodsucker_vampire_effector.cpp" />
-    <ClCompile Include="ai\Monsters\Boar\boar.cpp" />
-    <ClCompile Include="ai\Monsters\Boar\boar_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Boar\boar_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\Burer\burer.cpp" />
-    <ClCompile Include="ai\Monsters\Burer\burer_fast_gravi.cpp" />
-    <ClCompile Include="ai\Monsters\Burer\burer_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Burer\burer_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\Cat\cat.cpp" />
-    <ClCompile Include="ai\Monsters\Cat\cat_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Cat\cat_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\Chimera\chimera.cpp" />
-    <ClCompile Include="ai\Monsters\Chimera\chimera_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Chimera\chimera_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\controlled_actor.cpp" />
-    <ClCompile Include="ai\Monsters\Controller\controller.cpp" />
-    <ClCompile Include="ai\Monsters\Controller\controller_animation.cpp" />
-    <ClCompile Include="ai\Monsters\Controller\controller_direction.cpp" />
-    <ClCompile Include="ai\Monsters\Controller\controller_psy_hit.cpp" />
-    <ClCompile Include="ai\Monsters\Controller\controller_psy_hit_effector.cpp" />
-    <ClCompile Include="ai\Monsters\Controller\controller_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Controller\controller_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\control_animation.cpp" />
-    <ClCompile Include="ai\Monsters\control_animation_base.cpp" />
-    <ClCompile Include="ai\Monsters\control_animation_base_accel.cpp" />
-    <ClCompile Include="ai\Monsters\control_animation_base_load.cpp" />
-    <ClCompile Include="ai\Monsters\control_animation_base_update.cpp" />
-    <ClCompile Include="ai\Monsters\control_critical_wound.cpp" />
-    <ClCompile Include="ai\Monsters\control_direction.cpp" />
-    <ClCompile Include="ai\Monsters\control_direction_base.cpp" />
-    <ClCompile Include="ai\Monsters\control_jump.cpp" />
-    <ClCompile Include="ai\Monsters\control_manager.cpp" />
-    <ClCompile Include="ai\Monsters\control_manager_custom.cpp" />
-    <ClCompile Include="ai\Monsters\control_melee_jump.cpp" />
-    <ClCompile Include="ai\Monsters\control_movement.cpp" />
-    <ClCompile Include="ai\Monsters\control_movement_base.cpp" />
-    <ClCompile Include="ai\Monsters\control_path_builder.cpp" />
-    <ClCompile Include="ai\Monsters\control_path_builder_base.cpp" />
-    <ClCompile Include="ai\Monsters\control_path_builder_base_path.cpp" />
-    <ClCompile Include="ai\Monsters\control_path_builder_base_set.cpp" />
-    <ClCompile Include="ai\Monsters\control_path_builder_base_update.cpp" />
-    <ClCompile Include="ai\Monsters\control_rotation_jump.cpp" />
-    <ClCompile Include="ai\Monsters\control_run_attack.cpp" />
-    <ClCompile Include="ai\Monsters\control_sequencer.cpp" />
-    <ClCompile Include="ai\Monsters\control_threaten.cpp" />
-    <ClCompile Include="ai\Monsters\corpse_cover.cpp" />
-    <ClCompile Include="ai\Monsters\Dog\dog.cpp" />
-    <ClCompile Include="ai\Monsters\Dog\dog_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Dog\dog_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\energy_holder.cpp" />
-    <ClCompile Include="ai\Monsters\Flesh\flesh.cpp" />
-    <ClCompile Include="ai\Monsters\Flesh\flesh_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Flesh\flesh_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\Fracture\fracture.cpp" />
-    <ClCompile Include="ai\Monsters\Fracture\fracture_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Fracture\fracture_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\invisibility.cpp" />
-    <ClCompile Include="ai\Monsters\melee_checker.cpp" />
-    <ClCompile Include="ai\monsters\monster_aura.cpp" />
-    <ClCompile Include="ai\Monsters\monster_corpse_manager.cpp" />
-    <ClCompile Include="ai\Monsters\monster_corpse_memory.cpp" />
-    <ClCompile Include="ai\Monsters\monster_cover_manager.cpp" />
-    <ClCompile Include="ai\Monsters\monster_enemy_manager.cpp" />
-    <ClCompile Include="ai\Monsters\monster_enemy_memory.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\monster_event_manager.cpp" />
-    <ClCompile Include="ai\Monsters\monster_hit_memory.cpp" />
-    <ClCompile Include="ai\Monsters\monster_home.cpp" />
-    <ClCompile Include="ai\Monsters\monster_morale.cpp" />
-    <ClCompile Include="ai\Monsters\monster_sound_memory.cpp" />
-    <ClCompile Include="ai\Monsters\Poltergeist\poltergeist.cpp" />
-    <ClCompile Include="ai\Monsters\Poltergeist\poltergeist_ability.cpp" />
-    <ClCompile Include="ai\Monsters\Poltergeist\poltergeist_flame_thrower.cpp" />
-    <ClCompile Include="ai\Monsters\Poltergeist\poltergeist_movement.cpp" />
-    <ClCompile Include="ai\Monsters\Poltergeist\poltergeist_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Poltergeist\poltergeist_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\Poltergeist\poltergeist_telekinesis.cpp" />
-    <ClCompile Include="ai\Monsters\Pseudodog\pseudodog.cpp" />
-    <ClCompile Include="ai\Monsters\Pseudodog\pseudodog_psi_effector.cpp" />
-    <ClCompile Include="ai\Monsters\Pseudodog\pseudodog_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Pseudodog\pseudodog_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\Pseudodog\psy_dog.cpp" />
-    <ClCompile Include="ai\Monsters\Pseudodog\psy_dog_aura.cpp" />
-    <ClCompile Include="ai\Monsters\Pseudodog\psy_dog_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\PseudoGigant\pseudogigant_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\PseudoGigant\pseudogigant_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\PseudoGigant\pseudo_gigant.cpp" />
-    <ClCompile Include="ai\Monsters\PseudoGigant\pseudo_gigant_step_effector.cpp" />
-    <ClCompile Include="ai\Monsters\psy_aura.cpp" />
-    <ClCompile Include="ai\monsters\rats\ai_rat.cpp" />
-    <ClCompile Include="ai\monsters\rats\ai_rat_animations.cpp" />
-    <ClCompile Include="ai\monsters\rats\ai_rat_behaviour.cpp" />
-    <ClCompile Include="ai\monsters\rats\ai_rat_feel.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\monsters\rats\ai_rat_fire.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\monsters\rats\ai_rat_fsm.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ai\monsters\rats\ai_rat_templates.cpp">
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\monsters\rats\rat_state_activation.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\monsters\rats\rat_state_initialize.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\monsters\rats\rat_state_switch.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Snork\snork.cpp" />
-    <ClCompile Include="ai\Monsters\Snork\snork_jump.cpp" />
-    <ClCompile Include="ai\Monsters\Snork\snork_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Snork\snork_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\telekinesis.cpp" />
-    <ClCompile Include="ai\Monsters\telekinetic_object.cpp" />
-    <ClCompile Include="ai\Monsters\Tushkano\tushkano.cpp" />
-    <ClCompile Include="ai\Monsters\Tushkano\tushkano_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Tushkano\tushkano_state_manager.cpp" />
-    <ClCompile Include="ai\Monsters\Zombie\zombie.cpp" />
-    <ClCompile Include="ai\Monsters\Zombie\zombie_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\Monsters\Zombie\zombie_state_manager.cpp" />
-    <ClCompile Include="ai\phantom\phantom.cpp" />
-    <ClCompile Include="Ai\Stalker\ai_stalker.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\stalker\ai_stalker_cover.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\stalker\ai_stalker_debug.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="Ai\Stalker\ai_stalker_events.cpp" />
-    <ClCompile Include="Ai\Stalker\ai_stalker_feel.cpp" />
-    <ClCompile Include="Ai\Stalker\ai_stalker_fire.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="Ai\Stalker\ai_stalker_misc.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="Ai\Stalker\ai_stalker_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\stalker\ai_stalker_script_entity.cpp" />
-    <ClCompile Include="Ai\Trader\ai_trader.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\trader\ai_trader_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai\trader\trader_animation.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="ai\weighted_random.cpp" />
-    <ClCompile Include="ai_crow_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="ai_debug_variables.cpp">
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="ai_obstacle.cpp" />
     <ClCompile Include="AI_PhraseDialogManager.cpp" />
-    <ClCompile Include="ai_sounds.cpp" />
-    <ClCompile Include="ai_space.cpp" />
-    <ClCompile Include="ai_stalker_alife.cpp" />
-    <ClCompile Include="alife_anomalous_zone.cpp" />
-    <ClCompile Include="alife_combat_manager.cpp" />
-    <ClCompile Include="alife_communication_manager.cpp" />
-    <ClCompile Include="alife_creature_abstract.cpp" />
-    <ClCompile Include="alife_dynamic_object.cpp" />
-    <ClCompile Include="alife_graph_registry.cpp" />
-    <ClCompile Include="alife_group_abstract.cpp" />
-    <ClCompile Include="alife_group_registry.cpp" />
-    <ClCompile Include="alife_human_abstract.cpp" />
-    <ClCompile Include="alife_human_brain_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="alife_human_object_handler.cpp" />
-    <ClCompile Include="alife_interaction_manager.cpp" />
-    <ClCompile Include="alife_monster_abstract.cpp" />
-    <ClCompile Include="alife_monster_base.cpp" />
-    <ClCompile Include="alife_monster_brain_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="alife_monster_detail_path_manager.cpp" />
-    <ClCompile Include="alife_monster_detail_path_manager_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="alife_monster_movement_manager.cpp" />
-    <ClCompile Include="alife_monster_movement_manager_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="alife_monster_patrol_path_manager.cpp" />
-    <ClCompile Include="alife_monster_patrol_path_manager_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="alife_object.cpp" />
-    <ClCompile Include="alife_object_registry.cpp" />
-    <ClCompile Include="alife_online_offline_group.cpp" />
-    <ClCompile Include="alife_online_offline_group_brain.cpp" />
-    <ClCompile Include="alife_registry_container.cpp" />
-    <ClCompile Include="alife_schedule_registry.cpp" />
-    <ClCompile Include="alife_simulator.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="alife_simulator_base.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="alife_simulator_base2.cpp" />
-    <ClCompile Include="alife_simulator_header.cpp" />
-    <ClCompile Include="alife_simulator_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="alife_smart_terrain_registry.cpp" />
-    <ClCompile Include="alife_smart_terrain_task.cpp" />
-    <ClCompile Include="alife_smart_terrain_task_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="alife_smart_zone.cpp" />
-    <ClCompile Include="alife_spawn_registry.cpp" />
-    <ClCompile Include="alife_spawn_registry_header.cpp" />
-    <ClCompile Include="alife_spawn_registry_spawn.cpp" />
-    <ClCompile Include="alife_storage_manager.cpp" />
-    <ClCompile Include="alife_story_registry.cpp" />
-    <ClCompile Include="alife_surge_manager.cpp" />
-    <ClCompile Include="alife_switch_manager.cpp" />
-    <ClCompile Include="alife_time_manager.cpp" />
-    <ClCompile Include="alife_trader.cpp" />
-    <ClCompile Include="alife_trader_abstract.cpp" />
-    <ClCompile Include="alife_update_manager.cpp" />
     <ClCompile Include="ammunition_groups.cpp" />
     <ClCompile Include="animation_movement_controller.cpp" />
     <ClCompile Include="animation_script_callback.cpp">
@@ -2439,41 +1228,18 @@
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
-    <ClCompile Include="cover_evaluators.cpp" />
-    <ClCompile Include="cover_manager.cpp" />
-    <ClCompile Include="cover_point_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="cta_game_artefact.cpp" />
     <ClCompile Include="cta_game_artefact_activation.cpp" />
     <ClCompile Include="CustomDetector.cpp" />
-    <ClCompile Include="CustomMonster.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="CustomMonster_VCPU.cpp" />
     <ClCompile Include="CustomOutfit.cpp" />
     <ClCompile Include="CustomRocket.cpp" />
     <ClCompile Include="CustomZone.cpp" />
     <ClCompile Include="DamagableItem.cpp" />
-    <ClCompile Include="damage_manager.cpp" />
-    <ClCompile Include="danger_cover_location.cpp" />
-    <ClCompile Include="danger_explosive.cpp" />
-    <ClCompile Include="danger_location.cpp" />
-    <ClCompile Include="danger_manager.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="danger_object.cpp" />
-    <ClCompile Include="danger_object_location.cpp" />
     <ClCompile Include="date_time.cpp" />
     <ClCompile Include="DBG_Car.cpp" />
-    <ClCompile Include="dbg_draw_frustum.cpp" />
     <ClCompile Include="death_anims.cpp" />
     <ClCompile Include="death_anims_predicates.cpp" />
     <ClCompile Include="debug_renderer.cpp" />
-    <ClCompile Include="debug_text_tree.cpp" />
     <ClCompile Include="DelayedActionFuse.cpp" />
     <ClCompile Include="DemoInfo.cpp" />
     <ClCompile Include="DemoInfo_Loader.cpp" />
@@ -2482,20 +1248,11 @@
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
-    <ClCompile Include="detail_path_manager.cpp" />
-    <ClCompile Include="detail_path_manager_smooth.cpp" />
-    <ClCompile Include="doors_actor.cpp" />
-    <ClCompile Include="doors_door.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="doors_manager.cpp" />
     <ClCompile Include="double_shot_double_kill.cpp" />
     <ClCompile Include="DummyArtifact.cpp" />
     <ClCompile Include="DynamicHeightMap.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="dynamic_obstacles_avoider.cpp" />
     <ClCompile Include="eatable_item.cpp" />
     <ClCompile Include="eatable_item_object.cpp" />
     <ClCompile Include="EffectorBobbing.cpp" />
@@ -2503,20 +1260,9 @@
     <ClCompile Include="EffectorShot.cpp" />
     <ClCompile Include="EffectorShotX.cpp" />
     <ClCompile Include="EffectorZoomInertion.cpp" />
-    <ClCompile Include="ef_pattern.cpp" />
-    <ClCompile Include="ef_primary.cpp" />
-    <ClCompile Include="ef_storage.cpp" />
-    <ClCompile Include="ef_storage_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="ElectricBall.cpp" />
     <ClCompile Include="EliteDetector.cpp" />
     <ClCompile Include="encyclopedia_article.cpp" />
-    <ClCompile Include="enemy_manager.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="EntityCondition.cpp" />
     <ClCompile Include="entity_alive.cpp">
@@ -2616,10 +1362,6 @@
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <ClCompile Include="game_cl_teamdeathmatch.cpp" />
-    <ClCompile Include="game_graph_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="game_news.cpp" />
     <ClCompile Include="game_state_accumulator.cpp" />
     <ClCompile Include="game_state_accumulator_state_register.cpp" />
@@ -2680,10 +1422,6 @@
     <ClCompile Include="HitMarker.cpp" />
     <ClCompile Include="hits_store.cpp" />
     <ClCompile Include="hit_immunity.cpp" />
-    <ClCompile Include="hit_memory_manager.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="holder_custom.cpp" />
     <ClCompile Include="holder_custom_script.cpp">
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
@@ -2750,32 +1488,7 @@
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <ClCompile Include="inventory_quickswitch.cpp" />
-    <ClCompile Include="inventory_upgrade.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="inventory_upgrade_base.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="inventory_upgrade_group.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="inventory_upgrade_manager.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="inventory_upgrade_property.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="inventory_upgrade_root.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="invincible_fury.cpp" />
-    <ClCompile Include="item_manager.cpp" />
     <ClCompile Include="key_binding_registrator_script.cpp">
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
@@ -2791,13 +1504,6 @@
     <ClCompile Include="level_changer.cpp" />
     <ClCompile Include="level_debug.cpp" />
     <ClCompile Include="Level_GameSpy_Funcs.cpp" />
-    <ClCompile Include="level_graph.cpp" />
-    <ClCompile Include="level_graph_debug.cpp" />
-    <ClCompile Include="level_graph_debug2.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="level_graph_vertex.cpp" />
     <ClCompile Include="Level_input.cpp" />
     <ClCompile Include="Level_load.cpp" />
     <ClCompile Include="level_map_locations.cpp">
@@ -2827,7 +1533,6 @@
     <ClCompile Include="Level_SLS_Save.cpp" />
     <ClCompile Include="level_sounds.cpp" />
     <ClCompile Include="Level_start.cpp" />
-    <ClCompile Include="location_manager.cpp" />
     <ClCompile Include="login_manager.cpp" />
     <ClCompile Include="login_manager_script.cpp" />
     <ClCompile Include="magic_box3.cpp" />
@@ -2839,16 +1544,7 @@
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <ClCompile Include="map_spot.cpp" />
-    <ClCompile Include="material_manager.cpp" />
     <ClCompile Include="medkit.cpp" />
-    <ClCompile Include="memory_manager.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="memory_space_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="MercuryBall.cpp" />
     <ClCompile Include="Message_Filter.cpp" />
     <ClCompile Include="MilitaryOutfit.cpp" />
@@ -2865,47 +1561,16 @@
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
-    <ClCompile Include="movement_manager.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="movement_manager_game.cpp" />
-    <ClCompile Include="movement_manager_level.cpp" />
-    <ClCompile Include="movement_manager_patrol.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="movement_manager_physic.cpp" />
     <ClCompile Include="moving_bones_snd_player.cpp" />
-    <ClCompile Include="moving_object.cpp" />
-    <ClCompile Include="moving_objects.cpp" />
-    <ClCompile Include="moving_objects_dynamic.cpp" />
-    <ClCompile Include="moving_objects_dynamic_collision.cpp" />
-    <ClCompile Include="moving_objects_static.cpp" />
     <ClCompile Include="mpactor_dump_impl.cpp" />
     <ClCompile Include="MPPlayersBag.cpp" />
     <ClCompile Include="mp_config_sections.cpp" />
     <ClCompile Include="Needles.cpp" />
     <ClCompile Include="NoGravityZone.cpp" />
-    <ClCompile Include="object_actions.cpp" />
-    <ClCompile Include="object_handler.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="object_handler_planner.cpp" />
-    <ClCompile Include="object_handler_planner_missile.cpp" />
-    <ClCompile Include="object_handler_planner_weapon.cpp" />
-    <ClCompile Include="object_property_evaluators.cpp" />
-    <ClCompile Include="obstacles_query.cpp" />
     <ClCompile Include="ParticlesObject.cpp" />
     <ClCompile Include="ParticlesPlayer.cpp" />
     <ClCompile Include="particle_params.cpp" />
     <ClCompile Include="particle_params_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="patrol_path.cpp" />
-    <ClCompile Include="patrol_path_manager.cpp">
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
@@ -2917,8 +1582,6 @@
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
-    <ClCompile Include="patrol_path_storage.cpp" />
-    <ClCompile Include="patrol_point.cpp" />
     <ClCompile Include="PDA.cpp">
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
@@ -3022,20 +1685,9 @@
     <ClCompile Include="profile_data_types_script.cpp" />
     <ClCompile Include="profile_store.cpp" />
     <ClCompile Include="profile_store_script.cpp" />
-    <ClCompile Include="property_evaluator_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="property_storage_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="purchase_list.cpp" />
     <ClCompile Include="RadioactiveZone.cpp" />
     <ClCompile Include="random32.cpp" />
-    <ClCompile Include="rat_states.cpp" />
-    <ClCompile Include="rat_state_base.cpp" />
-    <ClCompile Include="rat_state_manager.cpp" />
     <ClCompile Include="RegistryFuncs.cpp" />
     <ClCompile Include="relation_registry.cpp" />
     <ClCompile Include="relation_registry_actions.cpp">
@@ -3043,8 +1695,6 @@
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <ClCompile Include="relation_registry_fights.cpp" />
-    <ClCompile Include="restricted_object.cpp" />
-    <ClCompile Include="restricted_object_obstacle.cpp" />
     <ClCompile Include="rewarding_events_handlers.cpp" />
     <ClCompile Include="rewarding_state_events.cpp" />
     <ClCompile Include="reward_event_generator.cpp" />
@@ -3055,11 +1705,6 @@
     </ClCompile>
     <ClCompile Include="RocketLauncher.cpp" />
     <ClCompile Include="RustyHairArtifact.cpp" />
-    <ClCompile Include="saved_game_wrapper.cpp" />
-    <ClCompile Include="saved_game_wrapper_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="ScientificOutfit.cpp" />
     <ClCompile Include="Scope.cpp">
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
@@ -3079,24 +1724,8 @@
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
-    <ClCompile Include="script_action_planner_action_wrapper.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="script_action_planner_wrapper.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="script_action_wrapper.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="script_animation_action.cpp" />
     <ClCompile Include="script_animation_action_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="script_binder.cpp">
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
@@ -3115,10 +1744,6 @@
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <ClCompile Include="script_effector_wrapper.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="script_entity.cpp">
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
@@ -3202,7 +1827,6 @@
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
-    <ClCompile Include="script_object.cpp" />
     <ClCompile Include="script_object_action.cpp" />
     <ClCompile Include="script_object_action_script.cpp">
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
@@ -3215,10 +1839,6 @@
     </ClCompile>
     <ClCompile Include="script_particle_action.cpp" />
     <ClCompile Include="script_particle_action_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="script_property_evaluator_wrapper.cpp">
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
@@ -3245,14 +1865,6 @@
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
-    <ClCompile Include="script_world_property_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="script_world_state_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
     <ClCompile Include="script_zone.cpp">
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
@@ -3264,100 +1876,11 @@
     <ClCompile Include="searchlight.cpp" />
     <ClCompile Include="secure_messaging.cpp" />
     <ClCompile Include="seniority_hierarchy_holder.cpp" />
-    <ClCompile Include="server_entity_wrapper.cpp" />
     <ClCompile Include="ShootingObject.cpp" />
     <ClCompile Include="shootingObject_dump_impl.cpp" />
-    <ClCompile Include="sight_action.cpp" />
-    <ClCompile Include="sight_manager.cpp" />
-    <ClCompile Include="sight_manager_target.cpp" />
     <ClCompile Include="Silencer.cpp" />
     <ClCompile Include="silent_shots.cpp" />
     <ClCompile Include="SimpleDetector.cpp" />
-    <ClCompile Include="smart_cover.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_action.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_animation_planner.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_animation_selector.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_default_behaviour_planner.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_description.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_detail.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_evaluators.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_loophole.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_loophole_planner_actions.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_object.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_object_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_planner_actions.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_planner_target_provider.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_planner_target_selector.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_storage.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_transition.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="smart_cover_transition_animation.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="sound_collection_storage.cpp" />
-    <ClCompile Include="sound_memory_manager.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="sound_player.cpp" />
-    <ClCompile Include="space_restriction.cpp" />
-    <ClCompile Include="space_restriction_base.cpp" />
-    <ClCompile Include="space_restriction_bridge.cpp" />
-    <ClCompile Include="space_restriction_composition.cpp" />
-    <ClCompile Include="space_restriction_holder.cpp" />
-    <ClCompile Include="space_restriction_manager.cpp" />
-    <ClCompile Include="space_restriction_shape.cpp" />
     <ClCompile Include="space_restrictor.cpp">
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
@@ -3374,142 +1897,19 @@
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
-    <ClCompile Include="stalker_alife_actions.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_alife_planner.cpp" />
-    <ClCompile Include="stalker_alife_task_actions.cpp" />
-    <ClCompile Include="stalker_animation_callbacks.cpp" />
-    <ClCompile Include="stalker_animation_data.cpp" />
-    <ClCompile Include="stalker_animation_data_storage.cpp" />
-    <ClCompile Include="stalker_animation_global.cpp" />
-    <ClCompile Include="stalker_animation_head.cpp" />
-    <ClCompile Include="stalker_animation_legs.cpp" />
-    <ClCompile Include="stalker_animation_manager.cpp" />
-    <ClCompile Include="stalker_animation_manager_debug.cpp" />
-    <ClCompile Include="stalker_animation_manager_update.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_animation_names.cpp" />
-    <ClCompile Include="stalker_animation_pair.cpp" />
-    <ClCompile Include="stalker_animation_script.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_animation_state.cpp" />
-    <ClCompile Include="stalker_animation_torso.cpp" />
-    <ClCompile Include="stalker_anomaly_actions.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_anomaly_planner.cpp" />
-    <ClCompile Include="stalker_base_action.cpp" />
-    <ClCompile Include="stalker_combat_actions.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_combat_action_base.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_combat_planner.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_danger_by_sound_actions.cpp" />
-    <ClCompile Include="stalker_danger_by_sound_planner.cpp" />
-    <ClCompile Include="stalker_danger_grenade_actions.cpp" />
-    <ClCompile Include="stalker_danger_grenade_planner.cpp" />
-    <ClCompile Include="stalker_danger_in_direction_actions.cpp" />
-    <ClCompile Include="stalker_danger_in_direction_planner.cpp" />
-    <ClCompile Include="stalker_danger_planner.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_danger_property_evaluators.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_danger_unknown_actions.cpp" />
-    <ClCompile Include="stalker_danger_unknown_planner.cpp" />
-    <ClCompile Include="stalker_death_actions.cpp" />
-    <ClCompile Include="stalker_death_planner.cpp" />
     <ClCompile Include="stalker_flair.cpp" />
-    <ClCompile Include="stalker_get_distance_actions.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_get_distance_planner.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_kill_wounded_actions.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_kill_wounded_planner.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_low_cover_actions.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_low_cover_planner.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_movement_manager_base.cpp" />
-    <ClCompile Include="stalker_movement_manager_obstacles.cpp" />
-    <ClCompile Include="stalker_movement_manager_obstacles_path.cpp" />
-    <ClCompile Include="stalker_movement_manager_smart_cover.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_movement_manager_smart_cover_fov_range.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_movement_manager_smart_cover_loopholes.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_movement_params.cpp" />
-    <ClCompile Include="stalker_planner.cpp" />
-    <ClCompile Include="stalker_property_evaluators.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_search_actions.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_search_planner.cpp" />
-    <ClCompile Include="stalker_sound_data.cpp" />
-    <ClCompile Include="stalker_sound_data_visitor.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="stalker_velocity_collection.cpp" />
-    <ClCompile Include="stalker_velocity_holder.cpp" />
     <ClCompile Include="state_arguments_functions.cpp" />
     <ClCompile Include="static_cast_checked_test.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="static_obstacles_avoider.cpp" />
     <ClCompile Include="stats_submitter.cpp" />
     <ClCompile Include="stats_submitter_dsa_params.cpp" />
     <ClCompile Include="StdAfx.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="steering_behaviour.cpp" />
-    <ClCompile Include="step_manager.cpp" />
     <ClCompile Include="string_table.cpp" />
     <ClCompile Include="team_base_zone.cpp" />
     <ClCompile Include="team_hierarchy_holder.cpp" />
-    <ClCompile Include="TeleWhirlwind.cpp" />
     <ClCompile Include="ThornArtifact.cpp" />
     <ClCompile Include="Torch.cpp" />
     <ClCompile Include="torch_script.cpp">
@@ -3528,7 +1928,6 @@
     </ClCompile>
     <ClCompile Include="trade_parameters.cpp" />
     <ClCompile Include="traffic_optimization.cpp" />
-    <ClCompile Include="trajectories.cpp" />
     <ClCompile Include="UIAchivementsIndicator.cpp" />
     <ClCompile Include="UICursor.cpp" />
     <ClCompile Include="UIDialogHolder.cpp" />
@@ -3824,12 +2223,6 @@
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
-    <ClCompile Include="vision_client.cpp" />
-    <ClCompile Include="visual_memory_manager.cpp">
-      <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="visual_memory_params.cpp" />
     <ClCompile Include="wallmark_manager.cpp" />
     <ClCompile Include="Weapon.cpp" />
     <ClCompile Include="WeaponAK74.cpp">

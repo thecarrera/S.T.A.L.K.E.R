@@ -1,7 +1,6 @@
-#include "stdafx.h"
-#pragma hdrstop
-
+#include "pch.hpp"
 #include "ai_sounds.h"
+#include "xrSound/Sound.h"
 
 xr_token anomaly_type_token[]={
 	{ "undefined",				sg_Undefined						},

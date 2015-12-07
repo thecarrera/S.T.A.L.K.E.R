@@ -6,8 +6,8 @@
 //	Description : Sounds for AI personalities
 ////////////////////////////////////////////////////////////////////////////
 
-#ifndef ai_soundsH
-#define ai_soundsH
+#pragma once
+#include "xrCore/xrCore.h"
 
 enum ESoundTypes {
 	SOUND_TYPE_NO_SOUND					= 0x00000000ui32,
@@ -81,5 +81,3 @@ enum ESoundTypes {
 #define ACCELERATED_SOUND_FACTOR			.5f
 
 extern xr_token anomaly_type_token[];
-
-#endif
