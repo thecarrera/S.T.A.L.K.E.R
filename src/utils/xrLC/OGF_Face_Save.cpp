@@ -33,7 +33,7 @@ std::pair<s16, u8> s24_tc_base(float uv) // [-32 .. +32]
     clamp(_primary, -32768, 32767);
     s32 _secondary = iFloor(255.5f * (rebased - float(_primary)));
     clamp(_secondary, 0, 255);
-    return mk_pair(s16(_primary), u8(_secondary));
+    return std::make_pair(s16(_primary), u8(_secondary));
 }
 
 s16 s16_tc_lmap(float uv) // [-1 .. +1]
@@ -150,8 +150,8 @@ void OGF::Save(IWriter& fs)
     H.format_version = xrOGF_FormatVersion;
     H.type = data.m_SWI.count ? MT_PROGRESSIVE : MT_NORMAL;
     H.shader_id = RegisterShader(sid);
-    H.bb.min = bbox.min;
-    H.bb.max = bbox.max;
+    H.bb.vMin = bbox.vMin;
+    H.bb.vMax = bbox.vMax;
     H.bs.c = C;
     H.bs.r = R;
 
@@ -197,8 +197,8 @@ void OGF_Reference::Save(IWriter& fs)
     H.format_version = xrOGF_FormatVersion;
     H.type = model->data.m_SWI.count ? MT_TREE_PM : MT_TREE_ST;
     H.shader_id = RegisterShader(sid);
-    H.bb.min = bbox.min;
-    H.bb.max = bbox.max;
+    H.bb.vMin = bbox.vMin;
+    H.bb.vMax = bbox.vMax;
     H.bs.c = C;
     H.bs.r = R;
 
