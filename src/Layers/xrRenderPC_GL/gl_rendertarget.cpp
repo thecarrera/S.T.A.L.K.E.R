@@ -15,9 +15,9 @@
 #include "Layers/xrRenderDX10/MSAA/dx10MSAABlender.h"
 #include "Layers/xrRenderDX10/DX10 Rain/dx10RainBlender.h"
 
-#if defined(LINUX)
-float OLES_SUN_LIMIT_27_01_07 = 100.f;
-#endif
+//#if defined(LINUX)
+//float OLES_SUN_LIMIT_27_01_07 = 100.f;
+//#endif
 
 void CRenderTarget::u_setrt(const ref_rt& _1, const ref_rt& _2, const ref_rt& _3, GLuint zb)
 {

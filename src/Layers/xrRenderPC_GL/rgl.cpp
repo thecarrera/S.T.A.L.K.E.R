@@ -679,9 +679,9 @@ void CRender::rmNormal()
 CRender::CRender()
     : m_bFirstFrameAfterReset(false)
 {
-#if defined(WINDOWS) // remove this after port r2_R_sun.cpp
+//#if defined(WINDOWS) // remove this after port r2_R_sun.cpp
     init_cacades();
-#endif
+//#endif
 }
 
 CRender::~CRender() {}
