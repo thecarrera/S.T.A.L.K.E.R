@@ -161,8 +161,10 @@ void CStateAbstract::add_debug_info(debug::text_tree& root_s)
     }
     else
     {
-        for (const auto& [id, substate] : substates)
+        for (const auto& item : substates)
         {
+            auto& id = item.first;
+            auto& substate = item.second;
             TextTree& current_state_s = root_s.add_line(EMonsterState(id));
             if (current_substate == id)
             {

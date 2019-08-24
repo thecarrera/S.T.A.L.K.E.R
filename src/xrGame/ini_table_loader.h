@@ -45,14 +45,14 @@ private:
     //перобразование из LPCSTR в T_ITEM
     T_ITEM convert(LPCSTR str)
     {
-        if constexpr(std::is_same<T_ITEM, int>::value)
+        static_assert(std::is_same<T_ITEM, int>::value || std::is_same_v<T_ITEM, float>,
+            "Specialization for convert in CIni_Table not found.");
+        IF_CONSTEXPR (std::is_same<T_ITEM, int>::value)
         {
             return atoi(str);
         }
         else
         {
-            static_assert(std::is_same_v<T_ITEM, float>,
-                "Specialization for convert in CIni_Table not found.");
             return (float)atof(str);
         }
     }

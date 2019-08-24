@@ -39,7 +39,7 @@ struct helper
     template <bool is_polymorphic>
     inline static void check(source_type source)
     {
-        if constexpr (is_polymorphic)
+        IF_CONSTEXPR (is_polymorphic)
             value<destination_type>::check(source);
     }
 };

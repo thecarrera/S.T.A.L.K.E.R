@@ -43,25 +43,20 @@ public:
 
     void Clear() { messages.clear(); }
 
-    constexpr void Add(T* object, const int priority = REG_PRIORITY_NORMAL)
-    {
-        Add({ object, priority });
-    }
-
-    void Add(MessageObject&& newMessage)
+    void Add(T* object, const int priority = REG_PRIORITY_NORMAL)
     {
 #ifdef DEBUG
-        VERIFY(newMessage.Object);
-        VERIFY(newMessage.Prio != REG_PRIORITY_INVALID);
+        VERIFY(object);
+        VERIFY(priority != REG_PRIORITY_INVALID);
 
         // Verify that we don't already have the same object with valid priority
         for (size_t i = 0; i < messages.size(); ++i)
         {
             auto& message = messages[i];
-            VERIFY(!(message.Prio != REG_PRIORITY_INVALID && message.Object == newMessage.Object));
+            VERIFY(!(message.Prio != REG_PRIORITY_INVALID && message.Object == object));
         }
 #endif
-        messages.emplace_back(newMessage);
+        messages.emplace_back(MessageObject({object, priority}));
 
         if (inProcess)
             changed = true;

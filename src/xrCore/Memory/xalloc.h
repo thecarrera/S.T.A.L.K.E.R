@@ -53,11 +53,13 @@ public:
         p->~U();
     }
 
+#define count std::numeric_limits<size_type>::max() / sizeof(T)
+    // I'm using macro to be compatible with older compilers
     static constexpr size_type max_size()
     {
-        constexpr auto count = std::numeric_limits<size_type>::max() / sizeof(T);
         return count > 0 ? count : 1;
     }
+#undef count
 };
 
 template <class T, class Other>

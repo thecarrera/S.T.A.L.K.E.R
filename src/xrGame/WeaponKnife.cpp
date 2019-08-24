@@ -94,7 +94,7 @@ void CWeaponKnife::Load(LPCSTR section)
 
     for (const auto& field : fields)
     {
-        std::apply(assertField, field);
+        assertField(std::get<0>(field), std::get<1>(field), std::get<2>(field), std::get<3>(field));
     }
 
     const auto processField = [&](pcstr name, pcstr fallback, FieldTypes type, void* outPtr)
@@ -139,7 +139,8 @@ void CWeaponKnife::Load(LPCSTR section)
 
     for (const auto& field : fields)
     {
-        std::apply(processField, field);
+        std::get<0>(field);
+        processField(std::get<0>(field), std::get<1>(field), std::get<2>(field), std::get<3>(field));
     }
 
     R_ASSERT4(successCount == elementsCount || successCount == 0,

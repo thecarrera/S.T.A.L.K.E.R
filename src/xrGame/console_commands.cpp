@@ -1815,9 +1815,9 @@ public:
     {
         if (!g_pGamePersistent || Device.editor())
             return;
-        for (auto& [name, cycle] : g_pGamePersistent->Environment().WeatherCycles)
+        for (auto& cycle : g_pGamePersistent->Environment().WeatherCycles)
         {
-            tips.push_back(name);
+            tips.push_back(cycle.first);
         }
     }
 };

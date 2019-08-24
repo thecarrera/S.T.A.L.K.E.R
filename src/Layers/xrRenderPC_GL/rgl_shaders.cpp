@@ -16,7 +16,7 @@ template <typename T>
 static bool create_shader(cpcstr name, pcstr* buffer, size_t const buffer_size, cpcstr file_name,
     T*& result, bool const disasm)
 {
-    auto [shader, program] = ShaderTypeTraits<T>::CreateHWShader(buffer, buffer_size, result->sh, name);
+    DECOMPOSE_PAIR(shader, program, ShaderTypeTraits<T>::CreateHWShader(buffer, buffer_size, result->sh, name));
 
     // Get the compilation result
     GLint status;
@@ -207,13 +207,19 @@ public:
     {
         string512 option_line;
         xr_sprintf(option_line, "#define %s\t%s\n", name, value);
-        m_options[pos] = { name, value, xr_strdup(option_line) };
+        auto& macro = m_options[pos];
+        macro.Name = name;
+        macro.Definition = value;
+        macro.FullDefine = xr_strdup(option_line);
         ++pos;
     }
 
     void finish()
     {
-        m_options[pos] = { nullptr, nullptr, nullptr };
+        auto& macro = m_options[pos];
+        macro.Name = nullptr;
+        macro.Definition = nullptr;
+        macro.FullDefine = nullptr;
     }
 
     size_t size() const { return pos; }

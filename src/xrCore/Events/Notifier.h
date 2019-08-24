@@ -107,7 +107,8 @@ private:
         template <class CB, class... Args>
         CEventNotifierCallback::CID CreateRegisteredCallback(Args&&... args)
         {
-            static_assert(std::is_base_of<CEventNotifierCallbackWithCid, CB>::value);
+            static_assert(std::is_base_of<typename CEventNotifierCallbackWithCid, typename CB>::value,
+                "Your class should ingerit from CEventNotifierCallbackWithCid");
 
             ScopeLock lock(&m_lock);
 

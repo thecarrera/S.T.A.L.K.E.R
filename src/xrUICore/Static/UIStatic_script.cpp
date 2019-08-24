@@ -3,6 +3,29 @@
 #include "UIAnimatedStatic.h"
 #include "xrScriptEngine/ScriptExporter.hpp"
 
+void CUIStatic_Init(CUIStatic* self, float x, float y, float width, float height)
+{
+    const Frect rect { x, y, width, height };
+    self->SetWndRect(rect);
+}
+
+void CUIStatic_Init2(CUIStatic* self, cpcstr texture, float x, float y, float width, float height)
+{
+    const Frect rect { x, y, width, height };
+    self->SetWndRect(rect);
+    self->InitTexture(texture);
+}
+
+void CUIStatic_InitTexture(CUIStatic* self, pcstr texture)
+{
+    self->InitTexture(texture);
+}
+
+void CUIStatic_InitTextureEx(CUIStatic* self, pcstr texture, pcstr shader)
+{
+    self->InitTextureEx(texture, shader);
+}
+
 using namespace luabind;
 
 SCRIPT_EXPORT(CUILines, (),
@@ -43,22 +66,13 @@ SCRIPT_EXPORT(CUIStatic, (CUIWindow),
 
             .def("SetTextColor", &CUIStatic::SetTextColor_script)
 
-            .def("Init", +[](CUIStatic* self, float x, float y, float width, float height)
-            {
-                const Frect rect { x, y, width, height };
-                self->SetWndRect(rect);
-            })
-            .def("Init", +[](CUIStatic* self, cpcstr texture, float x, float y, float width, float height)
-            {
-                const Frect rect { x, y, width, height };
-                self->SetWndRect(rect);
-                self->InitTexture(texture);
-            })
+            .def("Init", CUIStatic_Init)
+            .def("Init", CUIStatic_Init2)
 
             .def("InitTexture", &CUIStatic::InitTexture)
-            .def("InitTexture", +[](CUIStatic* self, pcstr texture) { self->InitTexture(texture); })
+            .def("InitTexture", CUIStatic_InitTexture)
             .def("InitTextureEx", &CUIStatic::InitTextureEx)
-            .def("InitTextureEx", +[](CUIStatic* self, pcstr texture, pcstr shader) { self->InitTextureEx(texture, shader); })
+            .def("InitTextureEx", CUIStatic_InitTextureEx)
 
             .def("SetTextureOffset", &CUIStatic::SetTextureOffset)
 

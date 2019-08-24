@@ -90,7 +90,7 @@ namespace xrDelegateBinder
     {
         using Tx = decltype(&T::operator());
 
-        if constexpr (type == DelegateDefault)
+        IF_CONSTEXPR (type == DelegateDefault)
             return DelegateFromFunction<T, Tx>::Bind(function);
         else
             return DelegateFromFunction<T, Tx>::BindPtr(function);        
@@ -99,7 +99,7 @@ namespace xrDelegateBinder
     template<DelegateType type, typename T>
     static auto BindFunctionDelegate(T function)
     {
-        if constexpr (type == DelegateDefault)
+        IF_CONSTEXPR (type == DelegateDefault)
             return DelegateFromFunction<T, T>::Bind(function);
         else
             return DelegateFromFunction<T, T>::BindPtr(function);        
@@ -108,7 +108,7 @@ namespace xrDelegateBinder
     template<DelegateType type, typename T, typename V>
     static auto BindFunctionDelegate(V ptr, T function)
     {
-        if constexpr (type == DelegateDefault)
+        IF_CONSTEXPR (type == DelegateDefault)
             return DelegateFromFunction<T, T>::Bind(ptr, function);
         else
             return DelegateFromFunction<T, T>::BindPtr(ptr, function);
@@ -118,7 +118,7 @@ namespace xrDelegateBinder
 template<typename T>
 static auto BindDelegate(T function)
 {
-    if constexpr (std::is_class_v<T>)
+    IF_CONSTEXPR (std::is_class_v<T>)
         return xrDelegateBinder::BindLambdaDelegate<xrDelegateBinder::DelegateDefault>(function);
     else
         return xrDelegateBinder::BindFunctionDelegate<xrDelegateBinder::DelegateDefault>(function);
@@ -133,7 +133,7 @@ static auto BindDelegate(V ptr, T function)
 template<typename T>
 static auto BindDelegatePtr(T function)
 {
-    if constexpr (std::is_class_v<T>)
+    IF_CONSTEXPR (std::is_class_v<T>)
         return xrDelegateBinder::BindLambdaDelegate<xrDelegateBinder::DelegatePtr>(function);
     else
         return xrDelegateBinder::BindFunctionDelegate<xrDelegateBinder::DelegatePtr>(function);

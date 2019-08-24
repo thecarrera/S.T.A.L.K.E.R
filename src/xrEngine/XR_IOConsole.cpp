@@ -610,7 +610,7 @@ void CConsole::Show()
     reset_selected_tip();
     update_tips();
 
-    auto [key1, key2] = GetKeysBindedTo(kCONSOLE);
+    DECOMPOSE_PAIR(key1, key2, GetKeysBindedTo(kCONSOLE));
 
     if (key1 > -1 && key1 < CInput::COUNT_KB_BUTTONS)
         ec().assign_callback(key1, text_editor::ks_free, Callback(this, &CConsole::Hide_cmd));

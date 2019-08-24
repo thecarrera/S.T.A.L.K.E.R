@@ -34,6 +34,7 @@ protected:
     template <bool isNum>
     static void LoadItemData(u32 count, LPCSTR cfgRecord)
     {
+        static_assert(isNum, "Oh..");
         for (u32 k = 0; k < count; k += 1)
         {
             string64 buf;
@@ -41,12 +42,12 @@ protected:
             char* id_str_lwr = xr_strdup(id_str); // not used?
             xr_strlwr(id_str_lwr);
 
-            if constexpr (!isNum)
+            /*IF_CONSTEXPR (!isNum)
             {
                 ITEM_DATA item_data(T_INDEX(m_pItemDataVector->size()), T_ID(id_str));
                 m_pItemDataVector->push_back(item_data);
             }
-            else
+            else*/
             {
                 string64 buf1;
                 LPCSTR rec1 = _GetItem(cfgRecord, ++k, buf1);

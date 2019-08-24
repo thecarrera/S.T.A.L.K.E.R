@@ -658,6 +658,11 @@ bool ray_pick(const Fvector& start, const Fvector& dir, float range,
     return false;
 }
 
+void add_cam_effector3(pcstr fn, int id, bool cyclic, pcstr cb_func)
+{
+    add_cam_effector2(fn, id, cyclic, cb_func, 0.0f);
+}
+
 // XXX nitrocaster: one can export enum like class, without defining dummy type
 template<typename T>
 struct EnumCallbackType {};
@@ -749,10 +754,7 @@ IC static void CLevel_Export(lua_State* luaState)
 
         def("add_cam_effector", &add_cam_effector),
         def("add_cam_effector2", &add_cam_effector2),
-        def("add_cam_effector2", +[](pcstr fn, int id, bool cyclic, pcstr cb_func)
-        {
-            add_cam_effector2(fn, id, cyclic, cb_func, 0.0f);
-        }),
+        def("add_cam_effector2", add_cam_effector3),
 
         def("remove_cam_effector", &remove_cam_effector),
         def("add_pp_effector", &add_pp_effector),

@@ -89,7 +89,7 @@ Fvector CCameraLook2::m_cam_offset;
 void CCameraLook2::OnActivate(CCameraBase* old_cam) { CCameraLook::OnActivate(old_cam); }
 void CCameraLook2::Update(Fvector& point, Fvector&)
 {
-    auto [key1, key2] = GetKeysBindedTo(kCAM_AUTOAIM);
+    DECOMPOSE_PAIR(key1, key2, GetKeysBindedTo(kCAM_AUTOAIM));
     const bool key1State = pInput->iGetAsyncKeyState(key1);
     const bool key2State = pInput->iGetAsyncKeyState(key2);
     if (!m_locked_enemy)

@@ -562,7 +562,7 @@ CEnvAmbient* CEnvironment::AppendEnvAmb(const shared_str& sect, CInifile const* 
         if (ambient->name().equal(sect))
             return ambient;
 
-    CEnvAmbient* ambient = Ambients.emplace_back(new CEnvAmbient());
+    CPP17_EMPLACE_BACK(Ambients, ambient, new CEnvAmbient());
     ambient->load(pIni ? *pIni : *m_ambients_config,
         pIni ? *pIni : *m_sound_channels_config,
         pIni ? *pIni : *m_effects_config, sect);

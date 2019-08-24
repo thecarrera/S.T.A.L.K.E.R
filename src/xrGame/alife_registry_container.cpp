@@ -31,14 +31,14 @@ struct RegistryHelper<TContainer, Loki::Typelist<Head, Tail>>
     static void Save(TContainer* self, IWriter& writer)
     {
         RegistryHelper<TContainer, Tail>::Save(self, writer);
-        if constexpr (isSerializable)
+        IF_CONSTEXPR (isSerializable)
             self->Head::save(writer);
     };
 
     static void Load(TContainer* self, IReader& reader)
     {
         RegistryHelper<TContainer, Tail>::Load(self, reader);
-        if constexpr (isSerializable)
+        IF_CONSTEXPR (isSerializable)
             self->Head::load(reader);
     }
 };

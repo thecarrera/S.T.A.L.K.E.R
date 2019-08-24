@@ -6,6 +6,11 @@
 
 using namespace luabind;
 
+auto CUIGameCustom_AddCustomStatic(CUIGameCustom* self, pcstr id, bool singleInstance)
+{
+    return self->AddCustomStatic(id, singleInstance);
+}
+
 CUIGameCustom* get_hud() { return CurrentGameUI(); }
 SCRIPT_EXPORT(CUIGameCustom, (CDialogHolder), {
     module(luaState)[class_<StaticDrawableWrapper>("StaticDrawableWrapper")
@@ -15,10 +20,7 @@ SCRIPT_EXPORT(CUIGameCustom, (CDialogHolder), {
         class_<CUIGameCustom, CDialogHolder>("CUIGameCustom")
             .def("AddDialogToRender", &CUIGameCustom::AddDialogToRender)
             .def("RemoveDialogToRender", &CUIGameCustom::RemoveDialogToRender)
-            .def("AddCustomStatic", +[](CUIGameCustom* self, pcstr id, bool singleInstance)
-            {
-                return self->AddCustomStatic(id, singleInstance);
-            })
+            .def("AddCustomStatic", &CUIGameCustom_AddCustomStatic)
             .def("AddCustomStatic", &CUIGameCustom::AddCustomStatic)
             .def("RemoveCustomStatic", &CUIGameCustom::RemoveCustomStatic)
             .def("HideActorMenu", &CUIGameCustom::HideActorMenu)

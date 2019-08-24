@@ -14,7 +14,7 @@ enum EActiveComAction
     eAdd
 };
 
-constexpr pcstr make_xrstr(ControlCom::EControlType e)
+/*constexpr*/ pcstr make_xrstr(ControlCom::EControlType e)
 {
     switch (e)
     {

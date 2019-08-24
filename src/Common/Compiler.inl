@@ -32,6 +32,30 @@
 #define XR_NOEXCEPT_OP(x) noexcept(x)
 #endif
 
+#if _MSC_VER >= 1911
+#define IF_CONSTEXPR if constexpr
+#else
+#define IF_CONSTEXPR if
+#endif
+
+#if _MSC_VER >= 1911
+#define CPP17_EMPLACE_BACK(container, name, element)\
+    auto& name = (container).emplace_back(element)
+#else
+#define CPP17_EMPLACE_BACK(container, name, element)\
+    container.emplace_back(element);\
+    auto& name = container.back()
+#endif
+
+#if _MSC_VER >= 1911
+#define DECOMPOSE_PAIR(out1, out2, pair)\
+    auto [out1, out2] = pair
+#else
+#define DECOMPOSE_PAIR(out1, out2, pair)\
+    auto out1 = pair.first;\
+    auto out2 = pair.second
+#endif
+
 // We use xr_* instead of defining e.g. strupr => _strupr, since the macro definition could
 // come before the std. header file declaring it, and thereby renaming that one too.
 #ifdef _MSC_VER

@@ -83,7 +83,7 @@ private:
     {
         size_t newLimit;
 
-        if constexpr (TGrowMultiplier > 1)
+        IF_CONSTEXPR (TGrowMultiplier > 1)
         {
             if (limit == 0) // first allocation
                 newLimit = SG_REALLOC_ADVANCE;
@@ -99,7 +99,7 @@ private:
         value_type* newNodes = allocator::allocate(newLimit);
         R_ASSERT(newNodes);
 
-        if constexpr (std::is_pod<T>::value)
+        IF_CONSTEXPR(std::is_pod<T>::value)
         {
             ZeroMemory(newNodes, sizeof(value_type) * newLimit);
             if (pool)

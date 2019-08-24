@@ -34,6 +34,61 @@ Frect	get_texture_rect(LPCSTR icon_name)
 {
     return CUITextureMaster::GetTextureRect(icon_name);
 }
+
+auto GetTextureName(pcstr iconName)
+{
+    return CUITextureMaster::GetTextureFileName(iconName);
+}
+
+auto GetTextureRect(pcstr iconName)
+{
+    return CUITextureMaster::GetTextureRect(iconName);
+}
+
+auto GetTextureInfo(pcstr name)
+{
+    return CUITextureMaster::FindItem(name);
+}
+
+auto GetTextureInfo2(pcstr name, pcstr defaultName)
+{
+    return CUITextureMaster::FindItem(name, defaultName);
+}
+
+auto GetTextureInfo3(pcstr name, TEX_INFO& outValue)
+{
+    return CUITextureMaster::FindItem(name, outValue);
+}
+
+auto GetTextureInfo4(pcstr name, pcstr defaultName, TEX_INFO& outValue)
+{
+    return CUITextureMaster::FindItem(name, defaultName, outValue);
+}
+
+void CUIWindow_Init(CUIWindow* self, float x, float y, float width, float height)
+{
+    const Frect rect { x, y, width, height };
+    self->SetWndRect(rect);
+}
+
+void CUIWindow_SetWndRect(CUIWindow* self, float x, float y, float width, float height)
+{
+    const Frect rect{ x, y, width, height };
+    self->SetWndRect(rect);
+}
+
+void CUIWindow_SetWndPos(CUIWindow* self, float x, float y)
+{
+    const Fvector2 pos{ x, y };
+    self->SetWndPos(pos);
+}
+
+void CUIWindow_SetWndSize(CUIWindow* self, float width, float height)
+{
+    const Fvector2 size{ width, height };
+    self->SetWndSize(size);
+}
+
 // clang-format off
 SCRIPT_EXPORT(CUIWindow, (), {
     module(luaState)
@@ -54,35 +109,13 @@ SCRIPT_EXPORT(CUIWindow, (), {
             .def("get_file_name", &TEX_INFO::get_file_name)
             .def("get_rect", &TEX_INFO::get_rect),
 
-        def("GetTextureName", +[](pcstr iconName)
-        {
-            return CUITextureMaster::GetTextureFileName(iconName);
-        }),
+        def("GetTextureName", GetTextureName),
+        def("GetTextureRect", GetTextureRect),
 
-        def("GetTextureRect", +[](pcstr iconName)
-        {
-            return CUITextureMaster::GetTextureRect(iconName);
-        }),
-
-        def("GetTextureInfo", +[](pcstr name)
-        {
-            return CUITextureMaster::FindItem(name);
-        }),
-
-        def("GetTextureInfo", +[](pcstr name, pcstr defaultName)
-        {
-            return CUITextureMaster::FindItem(name, defaultName);
-        }),
-
-        def("GetTextureInfo", +[](pcstr name, TEX_INFO& outValue)
-        {
-            return CUITextureMaster::FindItem(name, outValue);
-        }),
-
-        def("GetTextureInfo", +[](pcstr name, pcstr defaultName, TEX_INFO& outValue)
-        {
-            return CUITextureMaster::FindItem(name, defaultName, outValue);
-        }),
+        def("GetTextureInfo", GetTextureInfo),
+        def("GetTextureInfo", GetTextureInfo2),
+        def("GetTextureInfo", GetTextureInfo3),
+        def("GetTextureInfo", GetTextureInfo4),
 
         class_<CUIWindow>("CUIWindow")
             .def(constructor<>())
@@ -95,35 +128,19 @@ SCRIPT_EXPORT(CUIWindow, (), {
             .def("FocusReceiveTime", &CUIWindow::FocusReceiveTime)
             .def("GetAbsoluteRect", &CUIWindow::GetAbsoluteRect)
 
-            .def("Init", +[](CUIWindow* self, float x, float y, float width, float height)
-            {
-                const Frect rect { x, y, width, height };
-                self->SetWndRect(rect);
-            })
+            .def("Init", CUIWindow_Init)
             .def("Init", (void (CUIWindow::*)(Frect))& CUIWindow::SetWndRect_script)
 
             .def("SetWndRect", (void (CUIWindow::*)(Frect)) & CUIWindow::SetWndRect_script)
-            .def("SetWndRect", +[](CUIWindow* self, float x, float y, float width, float height)
-            {
-                const Frect rect { x, y, width, height };
-                self->SetWndRect(rect);
-            })
+            .def("SetWndRect", CUIWindow_SetWndRect)
             
             .def("SetWndSize", (void (CUIWindow::*)(Fvector2)) & CUIWindow::SetWndSize_script)
 
             .def("GetWndPos", &get_wnd_pos)
             .def("SetWndPos", (void (CUIWindow::*)(Fvector2)) & CUIWindow::SetWndPos_script)
 
-            .def("SetWndPos", +[](CUIWindow* self, float x, float y)
-            {
-                const Fvector2 pos { x, y };
-                self->SetWndPos(pos);
-            })
-            .def("SetWndSize", +[](CUIWindow* self, float width, float height)
-            {
-                const Fvector2 size { width, height };
-                self->SetWndSize(size);
-            })
+            .def("SetWndPos", CUIWindow_SetWndPos)
+            .def("SetWndSize", CUIWindow_SetWndSize)
 
             .def("GetWidth", &CUIWindow::GetWidth)
             .def("SetWidth", &CUIWindow::SetWidth)
@@ -145,6 +162,13 @@ SCRIPT_EXPORT(CUIWindow, (), {
     ];
 });
 
+void CUIFrameWindow_Init(CUIFrameWindow* self, pcstr texture, float x, float y, float width, float height)
+{
+    const Frect rect{ x, y, width, height };
+    self->SetWndRect(rect);
+    self->InitTexture(texture);
+}
+
 SCRIPT_EXPORT(CUIFrameWindow, (CUIWindow),
 {
     module(luaState)
@@ -154,14 +178,16 @@ SCRIPT_EXPORT(CUIFrameWindow, (CUIWindow),
             .def("SetWidth", &CUIFrameWindow::SetWidth)
             .def("SetHeight", &CUIFrameWindow::SetHeight)
             .def("SetColor", &CUIFrameWindow::SetTextureColor)
-            .def("Init", +[](CUIFrameWindow* self, pcstr texture, float x, float y, float width, float height)
-            {
-                const Frect rect { x, y, width, height };
-                self->SetWndRect(rect);
-                self->InitTexture(texture);
-            })
+            .def("Init", CUIFrameWindow_Init)
     ];
 });
+
+void CUIFrameLineWnd_Init(CUIFrameLineWnd* self, cpcstr texture, float x, float y, float width, float height, bool horizontal)
+{
+    const Fvector2 pos{ x, y };
+    const Fvector2 size{ width, height };
+    self->InitFrameLineWnd(texture, pos, size, horizontal);
+}
 
 SCRIPT_EXPORT(CUIFrameLineWnd, (CUIWindow),
 {
@@ -172,12 +198,7 @@ SCRIPT_EXPORT(CUIFrameLineWnd, (CUIWindow),
             .def("SetWidth", &CUIFrameLineWnd::SetWidth)
             .def("SetHeight", &CUIFrameLineWnd::SetHeight)
             .def("SetColor", &CUIFrameLineWnd::SetTextureColor)
-            .def("Init", +[](CUIFrameLineWnd* self, cpcstr texture, float x, float y, float width, float height, bool horizontal)
-            {
-                const Fvector2 pos { x, y };
-                const Fvector2 size { width, height };
-                self->InitFrameLineWnd(texture, pos, size, horizontal);
-            })
+            .def("Init", CUIFrameLineWnd_Init)
     ];
 });
 

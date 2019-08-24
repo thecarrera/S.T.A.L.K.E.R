@@ -40,11 +40,9 @@ constexpr void clamp(T& val, const T& _low, const T& _high)
 template <class T>
 constexpr T clampr(const T& val, const T& _low, const T& _high)
 {
-    if (val < _low)
-        return _low;
-    if (val > _high)
-        return _high;
-    return val;
+    return val < _low  ? _low  :
+           val > _high ? _high :
+           val;
 }
 
 inline float snapto(float value, float snap)

@@ -2,6 +2,11 @@
 #include "UIEditBox.h"
 #include "xrScriptEngine/ScriptExporter.hpp"
 
+void CUIEditBox_InitTexture(CUIEditBox* self, pcstr texture)
+{
+    self->InitTexture(texture);
+}
+
 using namespace luabind;
 
 SCRIPT_EXPORT(CUIEditBox, (CUIWindow), {
@@ -16,6 +21,6 @@ SCRIPT_EXPORT(CUIEditBox, (CUIWindow), {
         class_<CUIEditBox, CUICustomEdit>("CUIEditBox")
             .def(constructor<>())
             .def("InitTexture", &CUIEditBox::InitTexture)
-            .def("InitTexture", +[](CUIEditBox* self, pcstr texture) { self->InitTexture(texture); })
+            .def("InitTexture", CUIEditBox_InitTexture)
     ];
 });

@@ -187,17 +187,17 @@ public:
 
     Result invoke_args(xrDelegateArguments& args) const override
     {
-        if constexpr (sizeof ... (Args) > 0)
+        IF_CONSTEXPR (sizeof ... (Args) > 0)
         {
             tuple_type& values = args.get<Args...>().values();
             using index_sequence = std::make_index_sequence<std::tuple_size<typename std::decay<tuple_type>::type>::value>;
 
-            if constexpr (std::is_same_v<Result, void>)
+            IF_CONSTEXPR (std::is_same_v<Result, void>)
                 run(values, index_sequence{});
             else
                 return run(values, index_sequence{});
         }
-        else if constexpr (std::is_same_v<Result, void>)
+        else IF_CONSTEXPR (std::is_same_v<Result, void>)
             d_function();
         else
             return d_function();
@@ -205,7 +205,7 @@ public:
 
     Result invoke(Args ... args) const
     {
-        if constexpr (std::is_same_v<Result, void>)
+        IF_CONSTEXPR (std::is_same_v<Result, void>)
             d_function(std::forward<Args>(args)...);
         else
             return d_function(std::forward<Args>(args)...);
@@ -229,7 +229,7 @@ public:
 
     Result operator()(Args ... args) const
     {
-        if constexpr (std::is_same_v<Result, void>)
+        IF_CONSTEXPR (std::is_same_v<Result, void>)
             invoke(std::forward<Args>(args)...);
         else
             return invoke(std::forward<Args>(args)...);

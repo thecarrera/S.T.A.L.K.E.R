@@ -12,6 +12,18 @@
 #include "ListBox/UIListBoxItem.h"
 #include "xrScriptEngine/ScriptExporter.hpp"
 
+void CUIComboBox_Init(CUIComboBox* self, float x, float y, float width)
+{
+    const Fvector2 pos{ x, y };
+    self->InitComboBox(pos, width);
+}
+
+void CUIComboBox_Init2(CUIComboBox* self, float x, float y, float width, float /*height*/)
+{
+    const Fvector2 pos{ x, y };
+    self->InitComboBox(pos, width);
+}
+
 using namespace luabind;
 
 SCRIPT_EXPORT(CUIComboBox, (CUIWindow),
@@ -20,16 +32,8 @@ SCRIPT_EXPORT(CUIComboBox, (CUIWindow),
     [
         class_<CUIComboBox, CUIWindow>("CUIComboBox")
             .def(constructor<>())
-            .def("Init", +[](CUIComboBox* self, float x, float y, float width)
-            {
-                const Fvector2 pos { x, y };
-                self->InitComboBox(pos, width);
-            })
-            .def("Init", +[](CUIComboBox* self, float x, float y, float width, float /*height*/)
-            {
-                const Fvector2 pos { x, y };
-                self->InitComboBox(pos, width);
-            })
+            .def("Init", CUIComboBox_Init)
+            .def("Init", CUIComboBox_Init2)
             .def("SetVertScroll", &CUIComboBox::SetVertScroll)
             .def("SetListLength", &CUIComboBox::SetListLength)
             .def("CurrentID", &CUIComboBox::CurrentID)

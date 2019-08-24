@@ -6,11 +6,9 @@
 
 constexpr s32 clamp_to_8bit(const s32 val) noexcept
 {
-    if (val < 0)
-        return 0;
-    if (val > 255)
-        return 255;
-    return val;
+    return val < 0   ? 0   :
+           val > 255 ? 255 :
+           val;
 }
 
 // maps unsigned 8 bits/channel to D3DCOLOR
